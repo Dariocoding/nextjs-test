@@ -5,6 +5,9 @@ interface String {
 }
 
 // eslint-disable-line no-unused-vars
+// @ts-ignore
 String.prototype.prefix = function () {
 	return this.trim().split(' ')[0];
 };
+
+export default undefined;
