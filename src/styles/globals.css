@@ -1,0 +1,150 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+	box-sizing: border-box;
+}
+
+html {
+	font-family: 'Poppins', sans-serif;
+}
+
+input:focus {
+	outline: none;
+}
+
+:root {
+	--primary-color: #6c5ce7;
+	--primary-hover-color: #0090f0;
+	--primary-disabled-color: #0090f0;
+	--secondary-color: #341f97;
+	--secondary-hover-color: #5f27cd;
+	--secondary-disabled-color: #5f27cd;
+	--success-color: #00997a;
+	--success-hover-color: #00b894;
+	--success-disabled-color: #00b894;
+	--danger-color: #ff3838;
+	--danger-hover-color: #fd7272;
+	--danger-disabled-color: #fd7272;
+	--info-color: #17c0eb;
+	--info-hover-color: #18dcff;
+	--info-disabled-color: #18dcff;
+	--warning-color: #ff9f1a;
+	--warning-hover-color: #ffaf40;
+	--warning-disabled-color: #ffaf40;
+	--gradient: linear-gradient(to right, #3b1e74, #442189, #4d239f, #5625b6, #5f27cd);
+
+	--sidebar-width: 230px;
+	--border-radius: 15px;
+	--topnav-height: 110px;
+	--transition-cubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.btn,
+.btn-sm {
+	@apply font-medium inline-flex items-center justify-center border border-transparent rounded-lg leading-snug transition duration-150 ease-in-out;
+}
+
+.btn {
+	@apply px-8 py-3 shadow-lg;
+}
+
+.btn-sm {
+	@apply px-4 py-2 shadow;
+}
+
+.label-input {
+	@apply block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select,
+.form-checkbox,
+.form-radio {
+	@apply bg-white border-gray-300 focus:border-gray-500 border-2;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select,
+.form-checkbox,
+.form-radio {
+	@apply border-gray-400 sm:text-base focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select,
+.form-checkbox,
+.form-radio {
+	@apply dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select,
+.form-checkbox {
+	@apply rounded-lg;
+}
+
+.form-input,
+.form-textarea,
+.form-multiselect,
+.form-select {
+	@apply py-2 px-3;
+}
+
+.form-input,
+.form-textarea {
+	@apply placeholder-gray-500 block w-full text-gray-900 bg-gray-50;
+}
+
+.form-select {
+	@apply pr-10;
+}
+
+.form-checkbox,
+.form-radio {
+	@apply text-gray-800 rounded-sm;
+}
+
+.required {
+	@apply text-red-500 font-semibold;
+}
+
+.Toastify__toast-theme--colored.Toastify__toast--success {
+	background: #009688 !important;
+}
+
+::-webkit-scrollbar {
+	-webkit-appearance: none;
+}
+
+::-webkit-scrollbar:vertical {
+	width: 7.5px;
+}
+
+::-webkit-scrollbar-button:increment,
+::-webkit-scrollbar-button {
+	display: none;
+}
+
+::-webkit-scrollbar:horizontal {
+	height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+	background-color: #0090f0;
+	border-radius: 20px;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: 10px;
+}
