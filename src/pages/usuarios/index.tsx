@@ -1,14 +1,24 @@
+import TitleAdminPlaceholder from '@/components/@placeholders/TitleAdminPlaceholder';
 import { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import * as React from 'react';
 import { Tab, TabSet } from '../../components/@common';
 import NextHead from '../../components/@common/next-head';
 import TableLoader from '../../components/@placeholders/DataTablePlaceholder';
-import DataTableUsuario from '../../components/app-datatables/TableUsuarios';
-import PageContentAdmin from '../../components/layout-dashboard/PageContent';
 import { usersConfig } from '../../config/users';
 import { UserConfigInterface } from '../../config/users/interfaces';
 import useValidarPermisosPagina from '../../hooks/useValidarPermisosPagina';
 import { RADMIN } from '../../utils';
+
+const PageContentAdmin = dynamic(() => import('../../components/layout-dashboard/PageContent'), {
+	ssr: false,
+	loading: () => <TitleAdminPlaceholder />,
+});
+
+const DataTableUsuario = dynamic(() => import('../../components/app-datatables/TableUsuarios'), {
+	ssr: false,
+	loading: () => <TableLoader />,
+});
 
 const Usuarios: NextPage = () => {
 	useValidarPermisosPagina({ rolesPermisos: [RADMIN], urlReturn: '/dashboard' });

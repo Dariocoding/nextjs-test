@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import * as React from 'react';
 
 import { NextLink } from '../@common';
@@ -28,12 +29,14 @@ function Header() {
 						{/* Logo */}
 						<NextLink
 							href="/"
-							className="block h-full"
+							className="block h-full relative"
 							aria-label="Cruip"
 						>
-							<img
+							<Image
 								className="h-10"
 								src="/images/logo.png"
+								width={150}
+								height={44}
 								alt="Logo empresa"
 							/>
 						</NextLink>

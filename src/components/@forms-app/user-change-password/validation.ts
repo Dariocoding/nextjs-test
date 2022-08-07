@@ -1,7 +1,7 @@
 import { PasswordInterface } from '../../../config/users/interfaces';
 
-const validarPasswordUser = (valores: PasswordInterface): Object => {
-	let errores: PasswordInterface = {};
+const validarPasswordUser = (valores: PasswordInterface) => {
+	const errores: PasswordInterface = {};
 
 	if (valores.password.trim() === '') {
 		errores.password = 'La contraseña es obligatoria';

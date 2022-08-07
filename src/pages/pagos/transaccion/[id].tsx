@@ -1,4 +1,5 @@
 import { NextPage } from 'next';
+import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { FaArrowLeft, FaPaypal } from 'react-icons/fa';
@@ -6,11 +7,20 @@ import { Button, NextLink, Tile } from '../../../components/@common';
 import Tile404 from '../../../components/@common/404Tile';
 import NextHead from '../../../components/@common/next-head';
 import DashboardLoader from '../../../components/@placeholders/DashboardPlaceholder';
-import InvoiceTransaccion from '../../../components/app-invoices/InvoiceTransaccion';
-import PageContentAdmin from '../../../components/layout-dashboard/PageContent';
 import { pagosConfig } from '../../../config/pagos';
 import { PagoType } from '../../../config/pagos/interfaces';
 import useFetch from '../../../hooks/useFetch';
+
+const PageContentAdmin = dynamic(() => import('../../../components/layout-dashboard/PageContent'), {
+	ssr: false,
+});
+
+const InvoiceTransaccion = dynamic(
+	() => import('../../../components/app-invoices/InvoiceTransaccion'),
+	{
+		ssr: false,
+	}
+);
 
 const Orden: NextPage = () => {
 	const router = useRouter();

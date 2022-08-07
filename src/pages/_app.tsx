@@ -4,7 +4,6 @@ import * as React from 'react';
 import type { AppProps } from 'next/app';
 import DarkModeState from '../context/DarkModeState';
 import { useRouter } from 'next/router';
-import LayoutDashboard from '../components/layout-dashboard';
 import AuthState from '../context/AuthState';
 import { ToastContainer } from 'react-toastify';
 import RainbowStateColor from '../context/DarkModeState/RainbowStateColors';
@@ -12,9 +11,13 @@ import Loader from '../context/LoaderPageState/Loader';
 import LoaderPageState from '../context/LoaderPageState';
 import ModalState from '../context/ModalState';
 import ConfigState from '../context/ConfigState';
-import { motion } from 'framer-motion';
-import '@sweetalert2/theme-dark';
 import Head from 'next/head';
+import dynamic from 'next/dynamic';
+
+const LayoutDashboard = dynamic(() => import('../components/layout-dashboard'), {
+	ssr: false,
+	loading: () => <Loader loading texto="" />,
+});
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
@@ -36,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
 		const handleStart = (url: string) => {
 			if (url !== router.asPath) setLoading(true);
 		};
-		const handleComplete = (url: string) => {
+		const handleComplete = () => {
 			setLoading(false);
 		};
 

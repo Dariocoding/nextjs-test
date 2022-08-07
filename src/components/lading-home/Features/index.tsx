@@ -176,17 +176,17 @@ function Features() {
 							<div className="relative flex flex-col text-center lg:text-right">
 								<TransitionImage
 									tabSelected={tab}
-									src="images/bg-hero.jpg"
+									src="/images/bg-hero.jpg"
 									tab={1}
 								/>
 								<TransitionImage
 									tabSelected={tab}
-									src="images/bg-hero.jpg"
+									src="/images/bg-hero.jpg"
 									tab={2}
 								/>
 								<TransitionImage
 									tabSelected={tab}
-									src="images/bg-hero.jpg"
+									src="/images/bg-hero.jpg"
 									tab={3}
 								/>
 							</div>

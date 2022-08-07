@@ -5,10 +5,9 @@ import { useAuthContext } from '../../context/AuthState';
 import { useLoader } from '../../context/LoaderPageState';
 import { Drawer } from 'react-rainbow-components';
 import { Button, NextLink } from '../@common';
+import Image from 'next/image';
 
-interface INavbarProps {}
-
-const Navbar: React.FunctionComponent<INavbarProps> = props => {
+const Navbar: React.FC = () => {
 	const [openedDrawer, setOpenedDrawer] = React.useState(false);
 	const { setLoader } = useLoader();
 	const { autenticado, cerrarSesion } = useAuthContext();
@@ -77,7 +76,14 @@ const Navbar: React.FunctionComponent<INavbarProps> = props => {
 				slideFrom={'right'}
 				onRequestClose={toggleDrawer}
 			>
-				<img className="h-10" src="/images/logo.png" alt="Logo empresa" />
+				<Image
+					className="h-10"
+					src="/images/logo.png"
+					alt="Logo empresa"
+					quality={100}
+					loading={'eager'}
+					layout={'fill'}
+				/>
 				<ul className="flex flex-grow flex-col mt-20 justify-center items-center space-y-5">
 					<RenderIf isTrue={autenticado}>
 						<li>

@@ -1,11 +1,28 @@
 import * as React from 'react';
 import { FaHome } from 'react-icons/fa';
-import PageContentAdmin from '../components/layout-dashboard/PageContent';
 import { NextPage } from 'next';
 import { useAuthContext } from '../context/AuthState';
 import { RADMIN, RUSUARIO } from '../utils';
-import DashboardAdministrador from '../components/app-dashboards/DashboardAdmin';
-import DashboardEstudiante from '../components/app-dashboards/DashboardEstudiante';
+import dynamic from 'next/dynamic';
+import DashboardLoader from '@/components/@placeholders/DashboardPlaceholder';
+import TitleAdminPlaceholder from '@/components/@placeholders/TitleAdminPlaceholder';
+
+const PageContentAdmin = dynamic(() => import('../components/layout-dashboard/PageContent'), {
+	ssr: false,
+	loading: () => <TitleAdminPlaceholder />,
+});
+
+const DashboardAdministrador = dynamic(
+	() => import('../components/app-dashboards/DashboardAdmin'),
+	{
+		ssr: false,
+		loading: () => <DashboardLoader />,
+	}
+);
+
+const DashboardEstudiante = dynamic(() => import('../components/app-dashboards/DashboardUsuario'), {
+	ssr: false,
+});
 
 const Dashboard: NextPage = () => {
 	const { usuario } = useAuthContext();

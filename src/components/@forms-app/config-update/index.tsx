@@ -10,7 +10,7 @@ import { InputFormik } from '../../@forms/Input';
 
 interface IFormUpdateConfigProps {}
 
-const FormUpdateConfig: React.FC<IFormUpdateConfigProps> = props => {
+const FormUpdateConfig: React.FC<IFormUpdateConfigProps> = () => {
 	const { configuracion, obtenerConfiguracion } = useConfigContext();
 
 	const INITIAL_VALUES = {

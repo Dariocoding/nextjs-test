@@ -1,5 +1,6 @@
 import { Transition } from '../../../utils';
 import * as React from 'react';
+import Image from 'next/image';
 
 interface ITransitionImageProps {
 	tabSelected: number;
@@ -20,15 +21,15 @@ const TransitionImage: React.FunctionComponent<ITransitionImageProps> = props =>
 		leaveEnd="opacity-0 -translate-y-16"
 	>
 		<div className="relative inline-flex flex-col">
-			<img
+			<Image
 				className="md:max-w-none mx-auto rounded"
 				src={props.src}
 				width="500"
 				height="462"
 				alt="Features bg"
 			/>
-			<img
-				className="md:max-w-none absolute w-full left-0 transform animate-float"
+			<Image
+				className="md:max-w-none absolute w-full left-0 transform animate-float rounded-lg"
 				src={props.src}
 				width="500"
 				height="44"

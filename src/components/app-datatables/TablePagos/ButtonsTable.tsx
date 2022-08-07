@@ -19,7 +19,7 @@ interface IBotonesPagosProps {
 const BotonesPagos: React.FunctionComponent<IBotonesPagosProps> = props => {
 	const { usuario } = useAuthContext();
 	const { pago } = props;
-	const { idpago, referenciacobro, tipopago } = pago;
+	const { idpago, tipopago } = pago;
 	const handleEditar = () => props.editarPago(idpago);
 	const handleViewUser = () => props.viewUser(pago.user.iduser);
 

@@ -17,7 +17,7 @@ interface ITableTiposPagoProps {}
 
 type StateForm = 'update' | 'create';
 
-const TableTiposPago: React.FunctionComponent<ITableTiposPagoProps> = props => {
+const TableTiposPago: React.FC<ITableTiposPagoProps> = () => {
 	const { setLoader } = useLoader();
 	const [loadingForm, setLoadingForm] = React.useState(false);
 	const [stateForm, setStateForm] = React.useState<StateForm>('create');

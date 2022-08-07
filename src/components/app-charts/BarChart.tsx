@@ -5,6 +5,7 @@ import { USERS } from '../Charts/ChartPie';
 
 interface IBarChartUsuariosProps {}
 
+// eslint-disable-next-line
 const BarChartUsuarios: React.FunctionComponent<IBarChartUsuariosProps> = props => {
 	const [dateSelected, setDateSelected] = React.useState(new Date());
 

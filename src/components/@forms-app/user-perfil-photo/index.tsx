@@ -9,9 +9,7 @@ import { useLoader } from '../../../context/LoaderPageState';
 import { File } from '../../../extensions';
 import { FotoPerfilUser, handleError, PF } from '../../../utils';
 
-interface IPhotoProfileProps {}
-
-const PhotoProfile: React.FunctionComponent<IPhotoProfileProps> = props => {
+const PhotoProfile: React.FC = () => {
 	const { setLoader } = useLoader();
 	const { usuarioAutenticado, usuario } = useAuthContext();
 	const InputFile = React.useRef<HTMLInputElement>();
@@ -35,7 +33,7 @@ const PhotoProfile: React.FunctionComponent<IPhotoProfileProps> = props => {
 				async success(file: File) {
 					try {
 						setLoader(true, 'Subiendo foto de Perfil');
-						let formData = new FormData();
+						const formData = new FormData();
 						formData.append('file', file, file.name);
 						const url = usersConfig.endpoints.changeFotoPerfi;
 						const response = await clienteAxios.put(
@@ -65,7 +63,7 @@ const PhotoProfile: React.FunctionComponent<IPhotoProfileProps> = props => {
 		}
 	};
 
-	async function handleDeleteFile() {
+	/* 	async function handleDeleteFile() {
 		try {
 			setLoader(true, 'Eliminando foto de perfil...');
 			const response = await clienteAxios.delete(
@@ -78,7 +76,7 @@ const PhotoProfile: React.FunctionComponent<IPhotoProfileProps> = props => {
 		} finally {
 			setLoader(false);
 		}
-	}
+	} */
 
 	return (
 		<div

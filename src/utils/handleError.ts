@@ -1,6 +1,6 @@
 import { AxiosError } from 'axios';
+import Swal from 'sweetalert2';
 import { toast } from 'react-toastify';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
 export const handleError = (e: AxiosError, swalMessage?: boolean): void => {
 	//@ts-ignore
 	if (e.response?.data?.error) {

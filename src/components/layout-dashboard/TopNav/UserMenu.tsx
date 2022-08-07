@@ -1,4 +1,3 @@
-import { useRouter } from 'next/router';
 import * as React from 'react';
 import { FaSignOutAlt, FaUserEdit } from 'react-icons/fa';
 import { useAuthContext } from '../../../context/AuthState';
@@ -6,11 +5,8 @@ import { useLoader } from '../../../context/LoaderPageState';
 import { FotoPerfilUser } from '../../../utils';
 import { ButtonOutline, Dropdown, NextLink } from '../../@common';
 
-interface IUserMenuProps {}
-
-const UserMenu: React.FunctionComponent<IUserMenuProps> = props => {
+const UserMenu: React.FunctionComponent = () => {
 	const { setLoader } = useLoader();
-	const route = useRouter();
 	const { usuario, cerrarSesion } = useAuthContext();
 
 	const handleLogout = async () => {

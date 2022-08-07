@@ -4,6 +4,7 @@ import ChartPie, { USERS } from '../Charts/ChartPie';
 
 interface IChartPieUsuariosProps {}
 
+// eslint-disable-next-line
 const ChartPieUsuarios: React.FunctionComponent<IChartPieUsuariosProps> = props => {
 	const [dateSelected, setDateSelected] = React.useState(new Date());
 
@@ -39,7 +40,7 @@ const ChartPieUsuarios: React.FunctionComponent<IChartPieUsuariosProps> = props 
 			/>
 			<ChartPie
 				label="Usuarios Registrados"
-				data={USERS.map(u => Math.random() * 11)}
+				data={USERS.map(() => Math.random() * 11)}
 				labels={USERS.map(u => u.username)}
 			/>
 		</Tile>

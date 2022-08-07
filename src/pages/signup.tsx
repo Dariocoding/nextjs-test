@@ -17,7 +17,7 @@ import { authConfig } from '../config/auth';
 import clienteAxios from '../config/axios';
 import useIsAuthenticated from '../hooks/useIsAuthenticated';
 import { handleError, PaisesOptions, RUSUARIO } from '../utils';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal from 'sweetalert2';
 import { UserType } from '../config/users/interfaces';
 
 const SignUp: NextPage = () => {
@@ -59,7 +59,7 @@ const SignUp: NextPage = () => {
 					onSubmit={onSubmit}
 					initialValues={INITIAL_VALUES}
 					validate={valores => {
-						let errores: UserType = {};
+						const errores: UserType = {};
 
 						if (valores.password?.trim() === '') {
 							errores.password =

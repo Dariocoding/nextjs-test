@@ -3,8 +3,6 @@ import * as React from 'react';
 import { FaBell } from 'react-icons/fa';
 import { Dropdown } from '../../@common';
 
-interface INotificationsProps {}
-
 const itemDropDown = classNames([
 	'flex',
 	'items-center',
@@ -17,7 +15,7 @@ const itemDropDown = classNames([
 	'transition-colors',
 ]);
 
-const Notifications: React.FunctionComponent<INotificationsProps> = props => {
+const Notifications: React.FC = () => {
 	return (
 		<Dropdown
 			CustomToggle={() => (

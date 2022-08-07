@@ -20,8 +20,11 @@ const DashboardAdministrador = () => {
 	const [totalUsuarios, setTotalUsuarios] = React.useState(0);
 	const [totalAdministradores, setTotalAdministradores] = React.useState(0);
 	const [totalPagos, setTotalPagos] = React.useState(0);
+	// eslint-disable-next-line
 	const [dataChartMetodosPago, setDataChartMetodosPago] = React.useState({});
+	// eslint-disable-next-line
 	const [dataLineVentasMes, setDataLineVentasMes] = React.useState({});
+	// eslint-disable-next-line
 	const [dataVentasYear, setDataVentasYear] = React.useState({});
 	const [loading, setLoading] = React.useState(true);
 

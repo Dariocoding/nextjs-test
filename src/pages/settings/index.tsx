@@ -3,12 +3,16 @@ import { FaCogs } from 'react-icons/fa';
 import { Tile } from '../../components/@common';
 import FormUpdateConfig from '../../components/@forms-app/config-update';
 import CardSetting from '../../components/settings-card';
-import PageContentAdmin from '../../components/layout-dashboard/PageContent';
 import { tipoPagoConfig } from '../../config/tipospago';
 import { NextPage } from 'next';
 import NextHead from '../../components/@common/next-head';
 import useValidarPermisosPagina from '../../hooks/useValidarPermisosPagina';
 import { RADMIN } from '../../utils';
+import dynamic from 'next/dynamic';
+
+const PageContentAdmin = dynamic(() => import('../../components/layout-dashboard/PageContent'), {
+	ssr: false,
+});
 
 const Settings: NextPage = () => {
 	useValidarPermisosPagina({ urlReturn: '/dashboard', rolesPermisos: [RADMIN] });

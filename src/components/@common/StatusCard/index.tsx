@@ -1,9 +1,7 @@
-import classNames from 'classnames';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { IconType } from 'react-icons';
 import styled from 'styled-components';
-import { NextLink } from '../Link';
 
 interface IStatusCardProps {
 	Icon: IconType;

@@ -13,9 +13,9 @@ interface ITreeViewProps {
 }
 
 const TreeView: React.FunctionComponent<ITreeViewProps> = props => {
-	const { Item, subnav, sizeIcon, setSubnav } = props;
+	const { Item, subnav, setSubnav } = props;
 	const router = useRouter();
-	function handleChangePage(e: React.MouseEvent<HTMLSpanElement>) {
+	function handleChangePage() {
 		if (Item.title === subnav) setSubnav('');
 		else setSubnav(Item.title);
 	}
@@ -36,7 +36,7 @@ const TreeView: React.FunctionComponent<ITreeViewProps> = props => {
 				onClick={handleChangePage}
 			>
 				<span className="flex items-center">
-					<Item.Icon className="mr-1" />
+					<Item.Icon className="mr-1" size={props.sizeIcon} />
 					<span className="select-none font-medium">
 						{Item.title}
 					</span>

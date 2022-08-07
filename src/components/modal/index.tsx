@@ -17,7 +17,7 @@ const Modal: React.FC<IModalProps> = props => {
 		return () => {
 			window.removeEventListener('keydown', handleEsc);
 		};
-	}, []);
+	}, [setShowModal]);
 
 	let maxWidth: string;
 

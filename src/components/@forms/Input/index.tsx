@@ -10,12 +10,15 @@ interface IInputProps {
 	type?: React.HTMLInputTypeAttribute;
 	placeholder?: string;
 	autoFocus?: boolean;
-	onChange?(value: string | number): string | number;
+	onChange?(
+		value: string,
+		field: (field: React.ChangeEvent<HTMLInputElement>) => void
+	): string | number;
 	required?: boolean;
 }
 
 export const InputFormik: React.FunctionComponent<IInputProps> = props => {
-	const { errors, touched } = useFormikContext();
+	const { errors, touched, handleChange } = useFormikContext();
 	const { type = 'text', name, autoFocus, onChange } = props;
 
 	const error = getIn(errors, name);
@@ -42,6 +45,12 @@ export const InputFormik: React.FunctionComponent<IInputProps> = props => {
 				autoFocus={autoFocus}
 				className={'form-input'}
 				placeholder={props.placeholder}
+				onChange={(e: React.ChangeEvent<HTMLInputElement>) => {
+					if (onChange) {
+						return onChange(e.target.value, handleChange);
+					}
+					handleChange(e);
+				}}
 			/>
 
 			{validateError ? <small className="required text-xs">{error}</small> : null}

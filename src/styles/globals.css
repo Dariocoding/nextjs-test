@@ -42,6 +42,13 @@ input:focus {
 	--transition-cubic: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
+.image {
+	object-fit: contain;
+	width: 100% !important;
+	position: relative !important;
+	height: auto !important;
+}
+
 .btn,
 .btn-sm {
 	@apply font-medium inline-flex items-center justify-center border border-transparent rounded-lg leading-snug transition duration-150 ease-in-out;

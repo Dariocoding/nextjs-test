@@ -10,7 +10,7 @@ import { InputFormik } from '../../@forms/Input';
 
 interface IFormOlvidarPasswordProps {}
 
-const FormOlvidarPassword: React.FC<IFormOlvidarPasswordProps> = props => {
+const FormOlvidarPassword: React.FC<IFormOlvidarPasswordProps> = () => {
 	const { cerrarModal } = useModal();
 	const INITIAL_VALUES = { email_user: '' };
 

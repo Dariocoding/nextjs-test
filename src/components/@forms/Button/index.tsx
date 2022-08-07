@@ -13,7 +13,7 @@ interface IButtonFormikProps {
 
 export const ButtonFormik: React.FC<IButtonFormikProps> = props => {
 	const { variant = 'primary' } = props;
-	const { isSubmitting, touched, setTouched, values } = useFormikContext();
+	const { isSubmitting } = useFormikContext();
 
 	return (
 		<Button

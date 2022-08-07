@@ -5,14 +5,14 @@ import { Doughnut } from 'react-chartjs-2';
 import { getRandomColor } from '../../utils';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
-const options = {
+/* const options = {
 	responsive: true,
 	plugins: {
 		legend: {
 			display: false,
 		},
 	},
-};
+}; */
 
 export const USERS: Array<{
 	userId: any;

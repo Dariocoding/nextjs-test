@@ -4,6 +4,7 @@ import { Button, Table, TdTable, TrTable } from '../@common';
 import { RADMIN, RUSUARIO } from '../../utils';
 import React from 'react';
 import { RenderIf } from 'react-rainbow-components';
+import Image from 'next/image';
 interface IInvoiceTransaccionProps {
 	pago: any;
 }
@@ -49,7 +50,11 @@ const InvoiceTransaccion: React.FunctionComponent<IInvoiceTransaccionProps> = ({
 	return (
 		<section id="sPedido" className="invoice">
 			<div className="mb-4">
-				<img src={'/images/img-paypal.png'} alt="PayPal Icon" width={150} />
+				<Image
+					src={'/images/img-paypal.png'}
+					alt="PayPal Icon"
+					width={150}
+				/>
 			</div>
 			<div className="grid grid-cols-3 gap-4">
 				<div>

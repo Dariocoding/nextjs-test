@@ -8,9 +8,10 @@
 		"build": "next build",
 		"start": "next start",
 		"lint": "next lint",
-		"ts-lint-commit-hook": "tsc --noEmit --incremental"
+		"analyze": "cross-env ANALYZE=true next build"
 	},
 	"dependencies": {
+		"@next/bundle-analyzer": "^12.2.4",
 		"@next/env": "^12.2.2",
 		"@sweetalert2/theme-dark": "^5.0.11",
 		"axios": "^0.27.2",
@@ -18,12 +19,12 @@
 		"chart.js": "^3.8.0",
 		"classnames": "^2.3.1",
 		"compressorjs": "^1.1.1",
+		"cross-env": "^7.0.3",
 		"dayjs": "^1.11.3",
 		"dotenv-safe": "^8.2.0",
 		"formik": "^2.2.9",
 		"framer-motion": "^6.5.1",
 		"next": "12.2.0",
-		"nprogress": "^0.2.0",
 		"react": "18.2.0",
 		"react-chartjs-2": "^4.2.0",
 		"react-content-loader": "^6.2.0",

@@ -9,7 +9,7 @@ import LandingAuth from '../../../components/landing-auth';
 import clienteAxios from '../../../config/axios';
 import { usersConfig } from '../../../config/users';
 import { FotoPerfilUser, handleError } from '../../../utils';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal from 'sweetalert2';
 import validarPasswordUser from '../../../components/@forms-app/user-change-password/validation';
 import { UserType } from '../../../config/users/interfaces';
 

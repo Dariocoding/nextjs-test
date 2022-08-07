@@ -1,5 +1,5 @@
 import clienteAxios from '../config/axios';
-import Swal from 'sweetalert2/dist/sweetalert2.js';
+import Swal from 'sweetalert2';
 interface DeleteInfoProps {
 	title: string;
 	text: string;
@@ -10,6 +10,24 @@ interface DeleteInfoProps {
 
 export const DeleteInfo = (props: DeleteInfoProps): void => {
 	const { text, title, urlDelete, callback, textOnDelete } = props;
+
+	async function preConfirm() {
+		try {
+			let request;
+			if (urlDelete) {
+				request = await clienteAxios.delete(urlDelete);
+			}
+			return request;
+		} catch (error) {
+			if (error?.response?.data?.message) {
+				Swal.showValidationMessage(error.response.data.message);
+			} else {
+				Swal.showValidationMessage(`Request failed: ${error}`);
+			}
+			Swal.hideLoading();
+		}
+	}
+
 	Swal.fire({
 		title,
 		text,
@@ -34,21 +52,4 @@ export const DeleteInfo = (props: DeleteInfoProps): void => {
 			callback();
 		}
 	});
-
-	async function preConfirm() {
-		try {
-			let request;
-			if (urlDelete) {
-				request = await clienteAxios.delete(urlDelete);
-			}
-			return request;
-		} catch (error) {
-			if (error?.response?.data?.message) {
-				Swal.showValidationMessage(error.response.data.message);
-			} else {
-				Swal.showValidationMessage(`Request failed: ${error}`);
-			}
-			Swal.hideLoading();
-		}
-	}
 };

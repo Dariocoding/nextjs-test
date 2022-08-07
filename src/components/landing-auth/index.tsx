@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import * as React from 'react';
 import { NextLink } from '../@common';
 
@@ -13,7 +14,7 @@ interface ILandingAuthProps {
 	background: keyof backgroundKeys;
 }
 
-const LandingAuth: React.FunctionComponent<ILandingAuthProps> = props => {
+const LandingAuth: React.FC<ILandingAuthProps> = props => {
 	return (
 		<main className="flex-grow dark:bg-slate-900 dark:text-white h-screen">
 			<div className="h-screen">
@@ -22,11 +23,13 @@ const LandingAuth: React.FunctionComponent<ILandingAuthProps> = props => {
 						<div className="flex flex-col px-7 md:px-12 lg:px-16 md:pt-4 pt-0">
 							<div className="flex justify-center">
 								<NextLink href="/">
-									<img
+									<Image
 										src={
 											'/images/logo.png'
 										}
 										width={200}
+										height={66}
+										alt="Logo"
 									/>
 								</NextLink>
 							</div>

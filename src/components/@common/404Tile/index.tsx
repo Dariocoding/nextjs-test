@@ -9,7 +9,12 @@ interface ITile404Props {
 const Tile404: React.FunctionComponent<ITile404Props> = props => (
 	<Tile headerColor="var(--primary-color)">
 		<div className="flex items-center justify-center">
-			<Image src={'/images/not-found-tile.png'} width={300} height={300} />
+			<Image
+				src={'/images/not-found-tile.png'}
+				width={300}
+				height={300}
+				alt={'not-found'}
+			/>
 		</div>
 
 		{props.children}

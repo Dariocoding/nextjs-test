@@ -1,11 +1,11 @@
 import { FaPrint } from 'react-icons/fa';
 import { useConfigContext } from '../../context/ConfigState';
 import { Button, Table, TdTable, TrTable } from '../@common';
-import { PF, SMONEY } from '../../utils';
+import { SMONEY } from '../../utils';
 import * as React from 'react';
-import { useAuthContext } from '../../context/AuthState';
 import dayjs from 'dayjs';
 import { DetallePagoType, PagoType } from '../../config/pagos/interfaces';
+import Image from 'next/image';
 
 interface IInvoicePagoProps {
 	pago: PagoType;
@@ -14,7 +14,6 @@ interface IInvoicePagoProps {
 const InvoicePago: React.FunctionComponent<IInvoicePagoProps> = props => {
 	const { pago } = props;
 	const { user, detallesPago, referenciacobro, tipopago, status, fecha_cargo, monto } = pago;
-	const { usuario } = useAuthContext();
 	const { configuracion } = useConfigContext();
 	const fecha = dayjs(fecha_cargo).format('DD/MM/YYYY');
 
@@ -23,7 +22,7 @@ const InvoicePago: React.FunctionComponent<IInvoicePagoProps> = props => {
 			<div className="grid grid-flow-row grid-cols-1 lg:grid-cols-2 gap-12 mb-8">
 				<div>
 					<h2 className="page-header">
-						<img
+						<Image
 							width={150}
 							src={'/images/logo.png'}
 							alt="Logo"
@@ -138,7 +137,8 @@ interface ITrDetallePagoProps {
 }
 
 const TrDetallePago: React.FC<ITrDetallePagoProps> = props => {
-	const { detalle } = props;
+	props;
+	/* const { detalle } = props; */
 	/* 	const { horario, monto } = detalle;
 	const seccion = horario.seccion;
 	const nivel = seccion.nivel;

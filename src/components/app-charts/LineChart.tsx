@@ -5,7 +5,8 @@ import LineChart from '../Charts/LineChart';
 
 interface ILineChartUsuariosProps {}
 
-const LineChartUsuarios: React.FunctionComponent<ILineChartUsuariosProps> = props => {
+// eslint-disable-next-line
+const LineChartUsuarios: React.FC<ILineChartUsuariosProps> = props => {
 	const [dateSelected, setDateSelected] = React.useState(new Date());
 
 	async function handleChangeDate(date: Date) {

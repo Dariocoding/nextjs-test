@@ -29,8 +29,9 @@ export const Table: React.FunctionComponent<ITableProps> = props => {
 			<table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 rounded-t-lg">
 				<thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
 					<tr>
-						{thead.map(t => (
+						{thead.map((t, index) => (
 							<th
+								key={index}
 								colSpan={t.colSpan}
 								scope="col"
 								className="px-6 py-3 text-center"
@@ -43,10 +44,14 @@ export const Table: React.FunctionComponent<ITableProps> = props => {
 				<tbody>
 					{props.CustomTbody ? props.CustomTbody : null}
 					{tbody
-						? tbody.map(tr => (
-								<TrTable tableHover={tableHover}>
-									{tr.map(td => (
+						? tbody.map((tr, index) => (
+								<TrTable
+									tableHover={tableHover}
+									key={index}
+								>
+									{tr.map((td, index) => (
 										<TdTable
+											key={index}
 											className={
 												td.className
 											}

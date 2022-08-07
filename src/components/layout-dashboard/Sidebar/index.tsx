@@ -2,7 +2,6 @@ import classNames from 'classnames';
 import SidebarItem from './SidebarItem';
 import * as React from 'react';
 import routesSidebar from './routesSidebar';
-import { useConfigContext } from '../../../context/ConfigState';
 import { NextLink } from '../../@common';
 import { FaSignOutAlt } from 'react-icons/fa';
 import { classItem, classItemInner } from './SidebarItem';
@@ -10,6 +9,7 @@ import { useLoader } from '../../../context/LoaderPageState';
 import { useAuthContext } from '../../../context/AuthState';
 import useWindowSize from '../../../hooks/useWindowSize';
 import useRefVisible from '../../../hooks/useRefVisible';
+import Image from 'next/image';
 
 interface ISidebarProps {
 	isOpenedSidebar: boolean;
@@ -21,7 +21,6 @@ const classNameLogo = classNames('h-36', 'flex', 'items-center', 'justify-center
 const Sidebar: React.FunctionComponent<ISidebarProps> = props => {
 	const { setLoader } = useLoader();
 	const { cerrarSesion } = useAuthContext();
-	const { configuracion } = useConfigContext();
 	const windowSize = useWindowSize();
 	const { ref, isComponentVisible, eventTarget } = useRefVisible();
 	const [itemOpen, setItemOpen] = React.useState<string>();
@@ -48,6 +47,7 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = props => {
 				setIsOpenedSidebar(false);
 			}
 		}
+		// eslint-disable-next-line
 	}, [ref, isComponentVisible, windowSize.width, isOpenedSidebar, eventTarget?.classList]);
 
 	const handleLogout = async () => {
@@ -64,10 +64,12 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = props => {
 		>
 			<div className={classNameLogo}>
 				<NextLink href="/">
-					<img
+					<Image
 						src="/images/logo.png"
 						className="h-12 select-none"
-						alt=""
+						alt="Logo imagen"
+						width={150}
+						height={44}
 					/>
 				</NextLink>
 			</div>

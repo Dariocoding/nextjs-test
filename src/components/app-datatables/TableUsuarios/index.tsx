@@ -4,7 +4,6 @@ import clienteAxios from '../../../config/axios';
 import * as React from 'react';
 import { usersConfig } from '../../../config/users';
 import { UserConfigInterface, UserType, UserTypeTable } from '../../../config/users/interfaces';
-import { getIn } from 'formik';
 // COMPONENTS
 import DataTable from '../../DataTable';
 import HeadingTableUsuarios from './Heading';
@@ -17,7 +16,6 @@ import { HeadingDataTableProps } from '../../DataTable';
 import { useModal } from '../../../context/ModalState';
 import { useLoader } from '../../../context/LoaderPageState';
 import { Button } from '../../@common';
-import axios from 'axios';
 import FormChangePaswword from '../../@forms-app/user-change-password';
 
 const { endpoints } = usersConfig;

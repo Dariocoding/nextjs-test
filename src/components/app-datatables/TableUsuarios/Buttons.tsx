@@ -28,7 +28,7 @@ const ButtonTableUsuarios: React.FC<IButtonTableUsuariosProps> = props => {
 	const handleDelete = () => eliminarUsuario(iduser);
 	const handleEdit = () => editarUsuario(iduser);
 	const handleView = () => viewUsuario(iduser);
-	return (
+	return validarPermiso ? (
 		<div className="flex items-center justify-center">
 			<Dropdown
 				CustomToggle={() => (
@@ -63,7 +63,7 @@ const ButtonTableUsuarios: React.FC<IButtonTableUsuariosProps> = props => {
 				)}
 			/>
 		</div>
-	);
+	) : null;
 };
 
 export default ButtonTableUsuarios;

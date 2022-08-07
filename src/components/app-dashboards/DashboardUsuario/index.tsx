@@ -1,9 +1,7 @@
 import * as React from 'react';
 import NextHead from '../../@common/next-head';
 
-interface IDashboardEstudianteProps {}
-
-const DashboardEstudiante: React.FunctionComponent<IDashboardEstudianteProps> = props => {
+const DashboardUsuario: React.FC = () => {
 	return (
 		<React.Fragment>
 			<NextHead
@@ -14,4 +12,4 @@ const DashboardEstudiante: React.FunctionComponent<IDashboardEstudianteProps> = 
 	);
 };
 
-export default DashboardEstudiante;
+export default DashboardUsuario;

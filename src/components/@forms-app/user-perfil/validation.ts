@@ -1,7 +1,7 @@
 import { UserType } from '../../../config/users/interfaces';
 
-const validarFormUsuario = (valores: UserType, password?: boolean): Object => {
-	let errores: UserType = {};
+const validarFormUsuario = (valores: UserType, password?: boolean) => {
+	const errores: UserType = {};
 
 	if (valores.password?.trim() === '') {
 		errores.password = 'La contraseña no puede ir vacía';

@@ -1,13 +1,24 @@
 import * as React from 'react';
 import { tipoPagoConfig } from '../../config/tipospago';
-import PageContentAdmin from '../../components/layout-dashboard/PageContent';
-import TableTiposPago from '../../components/app-datatables/TableTipoPagos';
-import { NextPage } from 'next';
 import NextHead from '../../components/@common/next-head';
 import useValidarPermisosPagina from '../../hooks/useValidarPermisosPagina';
 import { RADMIN } from '../../utils';
+import dynamic from 'next/dynamic';
+import { NextPage } from 'next';
+import TitleAdminPlaceholder from '@/components/@placeholders/TitleAdminPlaceholder';
+import TableLoader from '@/components/@placeholders/DataTablePlaceholder';
 
-const TiposPago: NextPage = props => {
+const PageContentAdmin = dynamic(() => import('../../components/layout-dashboard/PageContent'), {
+	ssr: false,
+	loading: () => <TitleAdminPlaceholder />,
+});
+
+const TableTiposPago = dynamic(() => import('../../components/app-datatables/TableTipoPagos'), {
+	ssr: false,
+	loading: () => <TableLoader />,
+});
+
+const TiposPago: NextPage = () => {
 	useValidarPermisosPagina({ rolesPermisos: [RADMIN], urlReturn: '/dashboard' });
 	return (
 		<PageContentAdmin

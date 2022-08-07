@@ -10,13 +10,13 @@ interface IPrivateRouteProps {
 const PrivateRoute: React.FC<IPrivateRouteProps> = props => {
 	const router = useRouter();
 	const Fallback = props.fallback;
-	const { autenticado, usuario, cargando } = useAuthContext();
+	const { autenticado, cargando } = useAuthContext();
 
 	React.useEffect(() => {
 		if (!autenticado && !cargando) {
 			router.push('/');
 		}
-	}, [autenticado, cargando]);
+	}, [autenticado, cargando, router]);
 	if (cargando) return <React.Fragment>{Fallback}</React.Fragment>;
 
 	return <React.Fragment>{props.children}</React.Fragment>;
