@@ -8,11 +8,9 @@ import { NextPage } from 'next';
 import NextHead from '../components/@common/next-head';
 import { Tab, TabSet } from '@/components/@common/Tabs';
 import { Tile } from '@/components/@common/Tile';
-import { FaCogs } from '@/components/Icons/fa/FaCogs';
-import { FaUserCircle } from '@/components/Icons/fa/users/FaUserCircle';
-import { FaLock } from '@/components/Icons/fa/FaLock';
 import dynamic from 'next/dynamic';
 import TitleAdminPlaceholder from '@/components/@placeholders/TitleAdminPlaceholder';
+import { FaCogs, FaLock, FaUserCircle } from 'react-icons/fa';
 
 const PageContentAdmin = dynamic(() => import('../components/layout-dashboard/PageContent'), {
 	ssr: false,

@@ -9,12 +9,8 @@ import { Dropdown } from '@/components/@common/Dropdown';
 import { NextLink } from '@/components/@common/Link';
 import { Button } from '@/components/@common/Buttons';
 import { IDPAGOPAYPAL, RADMIN } from '@/utils/consts';
-import { FaUser } from '@/components/Icons/fa/users/FaUser';
-import { FaPaypal } from '@/components/Icons/fa/FaPaypal';
-import { FaFilePdf } from '@/components/Icons/fa/files/FaFilePdf';
-import { FaEye } from '@/components/Icons/fa/FaEye';
-import { FaPen } from '@/components/Icons/fa/FaPen';
-import { BsThreeDotsVertical } from '@/components/Icons/bs/BsThreeDotsVertical';
+import { FaEye, FaFilePdf, FaPaypal, FaPen, FaUser } from 'react-icons/fa';
+import { BsThreeDotsVertical } from 'react-icons/bs';
 
 interface IBotonesPagosProps {
 	pago: PagoType;

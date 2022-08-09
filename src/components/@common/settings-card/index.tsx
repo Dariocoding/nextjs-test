@@ -1,7 +1,7 @@
-import { FaArrowRight } from '@/components/Icons/fa/arrows/FaArrowRight';
-import { IconType } from '@/components/Icons/libs';
 import { OptionsColors } from '@/extensions';
 import React from 'react';
+import { IconType } from 'react-icons';
+import { FaArrowRight } from 'react-icons/fa';
 import { Button } from '../Buttons';
 import { NextLink } from '../Link';
 

@@ -1,7 +1,7 @@
 import classNames from 'classnames';
 import * as React from 'react';
 import { Dropdown } from '@/components/@common/Dropdown';
-import { FaBell } from '@/components/Icons/fa/FaBell';
+import { FaBell } from 'react-icons/fa';
 
 const itemDropDown = classNames([
 	'flex',

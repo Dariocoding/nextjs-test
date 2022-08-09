@@ -1,9 +1,9 @@
 import { ButtonFormik } from '@/components/@forms/Button';
 import { InputFormik } from '@/components/@forms/Input';
-import { FaLock } from '@/components/Icons/fa/FaLock';
 import { handleError } from '@/utils/handleError';
 import { Form, Formik, FormikHelpers } from 'formik';
 import * as React from 'react';
+import { FaLock } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import clienteAxios from '../../../config/axios';
 import validarPasswordUser from './validation';

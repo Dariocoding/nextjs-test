@@ -1,7 +1,7 @@
 import { NextLink } from '@/components/@common/Link';
-import { FaHome } from '@/components/Icons/fa/FaHome';
 import classNames from 'classnames';
 import * as React from 'react';
+import { FaHome } from 'react-icons/fa';
 
 type BreadcrumbType = Array<{ link?: string; titulo: string }>;
 export interface IBreadCrumbProps {

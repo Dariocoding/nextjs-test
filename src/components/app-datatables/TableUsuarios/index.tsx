@@ -17,9 +17,7 @@ import FormChangePaswword from '../../@forms-app/user-change-password';
 import { Button } from '@/components/@common/Buttons';
 import { handleError } from '@/utils/handleError';
 import { DeleteInfo } from '@/utils/delete-info';
-import { FaUserCircle } from '@/components/Icons/fa/users/FaUserCircle';
-import { FaPlus } from '@/components/Icons/fa/FaPlus';
-import { FaLock } from '@/components/Icons/fa/FaLock';
+import { FaLock, FaPlus, FaUserCircle } from 'react-icons/fa';
 
 const { endpoints } = usersConfig;
 

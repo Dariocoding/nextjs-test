@@ -13,8 +13,7 @@ import { Button } from '@/components/@common/Buttons';
 import { Tile } from '@/components/@common/Tile';
 import { handleError } from '@/utils/handleError';
 import { DeleteInfo } from '@/utils/delete-info';
-import { FaPen } from '@/components/Icons/fa/FaPen';
-import { FaPlus } from '@/components/Icons/fa/FaPlus';
+import { FaPen, FaPlus } from 'react-icons/fa';
 
 interface ITableTiposPagoProps {}
 

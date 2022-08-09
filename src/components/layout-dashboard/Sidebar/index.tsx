@@ -9,7 +9,7 @@ import useWindowSize from '../../../hooks/useWindowSize';
 import useRefVisible from '../../../hooks/useRefVisible';
 import Image from 'next/image';
 import { NextLink } from '@/components/@common/Link';
-import { FaSignOut } from '@/components/Icons/fa/FaSignOut';
+import { FaSignOutAlt } from 'react-icons/fa';
 
 interface ISidebarProps {
 	isOpenedSidebar: boolean;
@@ -83,7 +83,7 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = props => {
 
 			<div className={classItem} onClick={handleLogout}>
 				<div className={classItemInner}>
-					<FaSignOut className="mr-1" />
+					<FaSignOutAlt className="mr-1" />
 					<span className="select-none font-medium">
 						Cerrar Sesión
 					</span>

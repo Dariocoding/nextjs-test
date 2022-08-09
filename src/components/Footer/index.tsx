@@ -1,8 +1,6 @@
 import React from 'react';
+import { FaFacebook, FaGithub, FaTwitter } from 'react-icons/fa';
 import { NextLink } from '../@common/Link';
-import { FaFacebook } from '../Icons/fa/socials/FaFacebook';
-import { FaGithub } from '../Icons/fa/socials/FaGithub';
-import { FaTwitter } from '../Icons/fa/socials/FaTwitter';
 
 function Footer() {
 	return (

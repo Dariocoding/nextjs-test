@@ -6,7 +6,7 @@ import Image from 'next/image';
 import { Button } from '../@common/Buttons';
 import { Table, TdTable, TrTable } from '../@common/Table';
 import { SMONEY } from '@/utils/consts';
-import { FaPrint } from '../Icons/fa/FaPrint';
+import { FaPrint } from 'react-icons/fa';
 
 interface IInvoicePagoProps {
 	pago: PagoType;

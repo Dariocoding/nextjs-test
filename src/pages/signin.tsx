@@ -1,14 +1,12 @@
 import { NextLink } from '@/components/@common/Link';
 import { ButtonFormik } from '@/components/@forms/Button';
 import { InputFormik } from '@/components/@forms/Input';
-import { FaGithub } from '@/components/Icons/fa/socials/FaGithub';
-import { FaGoogle } from '@/components/Icons/fa/socials/FaGoogle';
-import { FaUserCircle } from '@/components/Icons/fa/users/FaUserCircle';
 import { handleError } from '@/utils/handleError';
 import { Form, Formik } from 'formik';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
+import { FaGithub, FaGoogle, FaUserCircle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import FormOlvidarPassword from '../components/@forms-app/auth-olvidar-password';
 import Header from '../components/Header';

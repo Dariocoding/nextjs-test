@@ -1,11 +1,9 @@
 import { Button } from '@/components/@common/Buttons';
 import { Dropdown } from '@/components/@common/Dropdown';
-import { BsThreeDotsVertical } from '@/components/Icons/bs/BsThreeDotsVertical';
-import { FaEye } from '@/components/Icons/fa/FaEye';
-import { FaPen } from '@/components/Icons/fa/FaPen';
-import { FaTrash } from '@/components/Icons/fa/FaTrash';
 import { IDSUPERADMINISTRADOR, RADMIN } from '@/utils/consts';
 import * as React from 'react';
+import { BsThreeDotsVertical } from 'react-icons/bs';
+import { FaEye, FaPen, FaTrash } from 'react-icons/fa';
 import { UserConfigInterface, UserType } from '../../../config/users/interfaces';
 import { useAuthContext } from '../../../context/AuthState';
 

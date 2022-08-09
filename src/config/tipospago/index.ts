@@ -1,4 +1,4 @@
-import { FaWallet } from '@/components/Icons/fa/currency/FaWallet';
+import { FaWallet } from 'react-icons/fa';
 
 export const tipoPagoConfig = {
 	Icon: FaWallet,

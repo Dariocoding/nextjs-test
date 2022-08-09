@@ -1,5 +1,5 @@
-import { FaMoon } from '@/components/Icons/fa/FaMoon';
 import React, { useState, useRef, useEffect } from 'react';
+import { FaMoon } from 'react-icons/fa';
 import TabButton from './TabButton';
 import TransitionImage from './TransitionImage';
 

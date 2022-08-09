@@ -1,11 +1,8 @@
 import React from 'react';
 import Testimonial from './Testimonial';
 import Image from 'next/image';
-import { FaFacebook } from '@/components/Icons/fa/socials/FaFacebook';
-import { FaTinder } from '@/components/Icons/fa/socials/FaTinder';
-import { FaAirbnb } from '@/components/Icons/fa/socials/FaAirbnb';
-import { FaHubspot } from '@/components/Icons/fa/socials/FaHubspot';
-import { FaAmazon } from '@/components/Icons/fa/socials/FaAmazon';
+import { FaAirbnb, FaAmazon, FaFacebook, FaHubspot } from 'react-icons/fa';
+import { SiTinder } from 'react-icons/si';
 
 function Testimonials() {
 	return (
@@ -30,7 +27,7 @@ function Testimonials() {
 					{/* Items */}
 					<div className="max-w-sm md:max-w-4xl mx-auto grid gap-2 grid-cols-4 md:grid-cols-5">
 						<Testimonial Icon={FaFacebook} />
-						<Testimonial Icon={FaTinder} />
+						<Testimonial Icon={SiTinder} />
 						<Testimonial Icon={FaAirbnb} />
 						<Testimonial Icon={FaHubspot} />
 						<Testimonial Icon={FaAmazon} />

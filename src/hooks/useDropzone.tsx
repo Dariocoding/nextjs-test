@@ -5,7 +5,7 @@ import styled from 'styled-components';
 import { toBase64 } from '../utils/toBase64';
 import { File } from '../extensions';
 import { Button } from '@/components/@common/Buttons';
-import { FaUpload } from '@/components/Icons/fa/FaUpload';
+import { FaUpload } from 'react-icons/fa';
 
 const useDropzone = (props: IUseDropzoneProps): UseDropzoneReturnValues => {
 	const {

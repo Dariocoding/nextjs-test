@@ -38,6 +38,10 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Head>
 				<title>Mi website</title>
 				<meta name="description" content="Descripcion de mi sitio web" />
+				<meta
+					name="viewport"
+					content="width=device-width, initial-scale=0.8"
+				/>
 				<link rel="icon" href="/favicon.ico" />
 			</Head>
 			<Loader texto="Loading..." loading={loading} />{' '}

@@ -1,6 +1,6 @@
-import { FaUserGroup } from '@/components/Icons/fa/users/FaUserGroup';
-import { FaUserShield } from '@/components/Icons/fa/users/FaUserShield';
 import { RADMIN, RUSUARIO } from '@/utils/consts';
+import { FaUserShield } from 'react-icons/fa';
+import { HiUserGroup } from 'react-icons/hi';
 import { UsersConfigInterface } from './interfaces';
 export const usersConfig: UsersConfigInterface = {
 	administrador: {
@@ -19,7 +19,7 @@ export const usersConfig: UsersConfigInterface = {
 		},
 	},
 	usuarios: {
-		Icon: FaUserGroup,
+		Icon: HiUserGroup,
 		upperCase: 'Usuario',
 		upperCasePlural: 'Usuarios',
 		lowerCase: 'usuario',

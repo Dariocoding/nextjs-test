@@ -2,7 +2,7 @@ import dayjs from 'dayjs';
 import Badge from 'react-rainbow-components/components/Badge';
 import { UserType } from '../../config/users/interfaces';
 import { FotoPerfilUser } from '@/utils/foto-perfil';
-import { FaUserCircle } from '../Icons/fa/users/FaUserCircle';
+import { FaUserCircle } from 'react-icons/fa';
 // COMPONENTS
 
 interface IUsuarioPerfilProps {

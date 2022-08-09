@@ -1,6 +1,6 @@
-import { IconType } from '@/components/Icons/libs';
 import { useRouter } from 'next/router';
 import * as React from 'react';
+import { IconType } from 'react-icons';
 import styled from 'styled-components';
 
 interface IStatusCardProps {

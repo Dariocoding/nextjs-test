@@ -1,9 +1,8 @@
 import classNames from 'classnames';
 import * as React from 'react';
+import { FaBars, FaSearch } from 'react-icons/fa';
 import Notifications from './Notificacions';
 import UserMenu from './UserMenu';
-import { FaBars } from '@/components/Icons/fa/FaBars';
-import { FaSearch } from '@/components/Icons/fa/FaSearch';
 
 interface ITopNavProps {
 	setIsOpened(value: boolean): void;

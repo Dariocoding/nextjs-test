@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { Table, TrTable, TdTable } from '../@common/Table';
 import { Button } from '../@common/Buttons';
 import { RADMIN, RUSUARIO } from '@/utils/consts';
-import { FaPrint } from '../Icons/fa/FaPrint';
+import { FaPrint } from 'react-icons/fa';
 interface IInvoiceTransaccionProps {
 	pago: any;
 }

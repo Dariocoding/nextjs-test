@@ -1,9 +1,7 @@
 import { NextLink } from '@/components/@common/Link';
-import { FaChevronDown } from '@/components/Icons/fa/arrows/FaChevronDown';
-import { FaChevronLeft } from '@/components/Icons/fa/arrows/FaChevronLeft';
-import { FaCircleNotch } from '@/components/Icons/fa/FaCircleNotch';
 import { useRouter } from 'next/router';
 import * as React from 'react';
+import { FaChevronDown, FaChevronLeft, FaCircleNotch } from 'react-icons/fa';
 import { classActiveItemInner, classItem, classItemInner } from '.';
 import { RouteSidebar } from '../routesSidebar';
 

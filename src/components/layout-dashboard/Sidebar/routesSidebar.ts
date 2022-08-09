@@ -1,8 +1,6 @@
-import { FaCogs } from '@/components/Icons/fa/FaCogs';
-import { FaHome } from '@/components/Icons/fa/FaHome';
-import { FaUsers } from '@/components/Icons/fa/users/FaUsers';
-import { IconType } from '@/components/Icons/libs';
 import { RADMIN } from '@/utils/consts';
+import { IconType } from 'react-icons';
+import { FaCogs, FaHome, FaUsers } from 'react-icons/fa';
 import { pagosConfig } from '../../../config/pagos';
 
 export interface RouteSidebar {

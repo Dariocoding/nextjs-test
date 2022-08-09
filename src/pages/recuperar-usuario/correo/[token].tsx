@@ -11,10 +11,9 @@ import validarPasswordUser from '../../../components/@forms-app/user-change-pass
 import { UserType } from '../../../config/users/interfaces';
 import { InputFormik } from '@/components/@forms/Input';
 import { ButtonFormik } from '@/components/@forms/Button';
-import { FaUnlock } from '@/components/Icons/fa/FaUnlock';
 import { FotoPerfilUser } from '@/utils/foto-perfil';
-import { FaLock } from '@/components/Icons/fa/FaLock';
 import { handleError } from '@/utils/handleError';
+import { FaLock, FaUnlock } from 'react-icons/fa';
 
 interface IRecuperarUsuarioProps {
 	user: UserType;

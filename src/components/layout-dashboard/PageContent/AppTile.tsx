@@ -3,8 +3,8 @@ import classNames from 'classnames';
 import BreadCrumb, { IBreadCrumbProps } from './BreadCrumb';
 import { Button } from '@/components/@common/Buttons';
 import { NextLink } from '@/components/@common/Link';
-import { IconType } from '@/components/Icons/libs';
-import { FaArrowLeft } from '@/components/Icons/fa/arrows/FaArrowLeft';
+import { IconType } from 'react-icons';
+import { FaArrowLeft } from 'react-icons/fa';
 
 export interface IAppTitleProps extends IBreadCrumbProps {
 	btnBackUrl?: string;

@@ -1,8 +1,8 @@
 import { Button } from '@/components/@common/Buttons';
 import { NextLink } from '@/components/@common/Link';
-import { FaArrowLeft } from '@/components/Icons/fa/arrows/FaArrowLeft';
 import { NextPage } from 'next';
 import * as React from 'react';
+import { FaArrowLeft } from 'react-icons/fa';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 

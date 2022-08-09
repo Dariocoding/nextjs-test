@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 import * as React from 'react';
-import { FaSearch } from '../Icons/fa/FaSearch';
+import { FaSearch } from 'react-icons/fa';
 
 const InputContainerBusqueda = styled.div`
 	margin-right: 20px;

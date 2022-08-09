@@ -1,9 +1,9 @@
-import { FaUpload } from '@/components/Icons/fa/FaUpload';
 import { PF } from '@/utils/consts';
 import { FotoPerfilUser } from '@/utils/foto-perfil';
 import { handleError } from '@/utils/handleError';
 import Compressor from 'compressorjs';
 import * as React from 'react';
+import { FaUpload } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import clienteAxios from '../../../config/axios';
 import { usersConfig } from '../../../config/users';

@@ -4,7 +4,7 @@ import { useAuthContext } from '../context/AuthState';
 import dynamic from 'next/dynamic';
 import DashboardLoader from '@/components/@placeholders/DashboardPlaceholder';
 import { RADMIN, RUSUARIO } from '@/utils/consts';
-import { FaHome } from '@/components/Icons/fa/FaHome';
+import { FaTachometerAlt } from 'react-icons/fa';
 
 const PageContentAdmin = dynamic(() => import('../components/layout-dashboard/PageContent'), {
 	ssr: false,
@@ -26,7 +26,7 @@ const Dashboard: NextPage = () => {
 	const { usuario } = useAuthContext();
 	return (
 		<PageContentAdmin
-			Icon={FaHome}
+			Icon={FaTachometerAlt}
 			titulo={'Dashboard'}
 			descripcion={'Bienvenido a TUCRM'}
 		>

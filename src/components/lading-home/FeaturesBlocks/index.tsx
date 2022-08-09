@@ -1,11 +1,8 @@
 import React from 'react';
+import { BsStars } from 'react-icons/bs';
+import { FaMobile, FaPeopleArrows, FaSearch, FaUserPlus } from 'react-icons/fa';
+import { MdDesignServices } from 'react-icons/md';
 import FeatureBlock from './Card';
-import { FaSearch } from '@/components/Icons/fa/FaSearch';
-import { FaPeopleArrow } from '@/components/Icons/fa/users/FaPeopleArrow';
-import { FaUserPlus } from '@/components/Icons/fa/users/FaUserPlus';
-import { FaMobile } from '@/components/Icons/fa/FaMobile';
-import { FaStars } from '@/components/Icons/fa/FaStars';
-import { FaDesignService } from '@/components/Icons/fa/FaDesignService';
 
 function FeaturesBlocks() {
 	return (
@@ -33,7 +30,7 @@ function FeaturesBlocks() {
 					{/* Items */}
 					<div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start md:max-w-2xl lg:max-w-none">
 						<FeatureBlock
-							Icon={FaPeopleArrow}
+							Icon={FaPeopleArrows}
 							title={'Initial Contact'}
 							description={
 								'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -65,7 +62,7 @@ function FeaturesBlocks() {
 						/>
 
 						<FeatureBlock
-							Icon={FaDesignService}
+							Icon={MdDesignServices}
 							title={'Design Phase'}
 							description={
 								'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -73,7 +70,7 @@ function FeaturesBlocks() {
 						/>
 
 						<FeatureBlock
-							Icon={FaStars}
+							Icon={BsStars}
 							title={'Develop & Launch'}
 							description={
 								'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'

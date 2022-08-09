@@ -1,4 +1,4 @@
-import { FaDollarSign } from '@/components/Icons/fa/currency/FaDollarSign';
+import { FaDollarSign } from 'react-icons/fa';
 
 export const pagosConfig = {
 	Icon: FaDollarSign,

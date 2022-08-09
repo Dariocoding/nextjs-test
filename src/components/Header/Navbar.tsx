@@ -6,10 +6,7 @@ import { useLoader } from '../../context/LoaderPageState';
 import Image from 'next/image';
 import { Button } from '../@common/Buttons';
 import { NextLink } from '../@common/Link';
-import { FaHome } from '../Icons/fa/FaHome';
-import { FaSignOut } from '../Icons/fa/FaSignOut';
-import { FaBars } from '../Icons/fa/FaBars';
-import { FaArrowRight } from '../Icons/fa/arrows/FaArrowRight';
+import { FaArrowRight, FaBars, FaHome, FaSignOutAlt } from 'react-icons/fa';
 
 const Navbar: React.FC = () => {
 	const [openedDrawer, setOpenedDrawer] = React.useState(false);
@@ -39,7 +36,7 @@ const Navbar: React.FC = () => {
 					</li>
 					<li className="hidden md:block">
 						<Button variant="default" onClick={handleLogout}>
-							<span>Logout</span> <FaSignOut />
+							<span>Logout</span> <FaSignOutAlt />
 						</Button>
 					</li>
 				</RenderIf>
@@ -48,7 +45,7 @@ const Navbar: React.FC = () => {
 					<li className="hidden md:block">
 						<NextLink
 							href="/signin"
-							className="font-medium text-gray-50 hover:text-gray-200 px-5 py-3 flex items-center transition duration-150 ease-in-out"
+							className="font-medium text-slate-900 hover:text-slate-700 px-5 py-3 flex items-center transition duration-150 ease-in-out"
 						>
 							Sign in
 						</NextLink>
@@ -85,8 +82,9 @@ const Navbar: React.FC = () => {
 					src="/images/logo.png"
 					alt="Logo empresa"
 					quality={100}
+					width={150}
+					height={44}
 					loading={'eager'}
-					layout={'fill'}
 				/>
 				<ul className="flex flex-grow flex-col mt-20 justify-center items-center space-y-5">
 					<RenderIf isTrue={autenticado}>
@@ -104,7 +102,7 @@ const Navbar: React.FC = () => {
 								variant="default"
 								onClick={handleLogout}
 							>
-								<span>Logout</span> <FaSignOut />
+								<span>Logout</span> <FaSignOutAlt />
 							</Button>
 						</li>
 					</RenderIf>

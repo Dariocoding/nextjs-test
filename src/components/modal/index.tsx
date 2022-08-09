@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { motion } from 'framer-motion';
 import { IModalProps } from './interfaces';
-import { FaX } from '../Icons/fa/FaX';
+import { FaTimes } from 'react-icons/fa';
 
 const Modal: React.FC<IModalProps> = props => {
 	const { showModal, setShowModal } = props;
@@ -60,7 +60,7 @@ const Modal: React.FC<IModalProps> = props => {
 								onClick={() => setShowModal(false)}
 							>
 								<span>
-									<FaX />
+									<FaTimes />
 								</span>
 							</button>
 						</div>

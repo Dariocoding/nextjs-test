@@ -8,7 +8,7 @@ import useValidarPermisosPagina from '../../hooks/useValidarPermisosPagina';
 import dynamic from 'next/dynamic';
 import { Tile } from '@/components/@common/Tile';
 import { RADMIN } from '@/utils/consts';
-import { FaCogs } from '@/components/Icons/fa/FaCogs';
+import { FaCogs } from 'react-icons/fa';
 
 const PageContentAdmin = dynamic(() => import('../../components/layout-dashboard/PageContent'), {
 	ssr: false,

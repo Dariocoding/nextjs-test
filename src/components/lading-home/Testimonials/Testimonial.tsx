@@ -1,5 +1,5 @@
-import { IconType } from '@/components/Icons/libs';
 import * as React from 'react';
+import { IconType } from 'react-icons';
 
 interface ITestimonialProps {
 	Icon: IconType;
