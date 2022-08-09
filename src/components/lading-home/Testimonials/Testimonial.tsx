@@ -1,5 +1,5 @@
+import { IconType } from '@/components/Icons/libs';
 import * as React from 'react';
-import { IconType } from 'react-icons';
 
 interface ITestimonialProps {
 	Icon: IconType;
@@ -7,7 +7,7 @@ interface ITestimonialProps {
 
 const Testimonial: React.FunctionComponent<ITestimonialProps> = props => (
 	<div className="flex items-center justify-center py-2 col-span-2 md:col-auto">
-		<props.Icon size={35} />
+		<props.Icon className="h-10" />
 	</div>
 );
 

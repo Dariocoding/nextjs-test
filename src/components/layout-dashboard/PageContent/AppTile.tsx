@@ -1,10 +1,10 @@
-import { Button, NextLink } from '../../@common';
-import { FaArrowLeft } from 'react-icons/fa';
-import { IconType } from 'react-icons';
 import * as React from 'react';
-import { useTheme } from '../../../context/DarkModeState';
 import classNames from 'classnames';
 import BreadCrumb, { IBreadCrumbProps } from './BreadCrumb';
+import { Button } from '@/components/@common/Buttons';
+import { NextLink } from '@/components/@common/Link';
+import { IconType } from '@/components/Icons/libs';
+import { FaArrowLeft } from '@/components/Icons/fa/arrows/FaArrowLeft';
 
 export interface IAppTitleProps extends IBreadCrumbProps {
 	btnBackUrl?: string;
@@ -18,7 +18,6 @@ const classTitle = classNames([
 	'flex',
 	'items-center',
 	'bg-slate-100',
-	'dark:bg-slate-800',
 	'py-3',
 	'px-5',
 	'mt-5',
@@ -32,7 +31,6 @@ const classTitle = classNames([
 ]);
 
 const AppTitle: React.FC<IAppTitleProps> = props => {
-	const { theme } = useTheme();
 	const { btnBackUrl, btnBackText, titulo, descripcion, Icon } = props;
 	return (
 		<div className={classTitle}>
@@ -54,7 +52,6 @@ const AppTitle: React.FC<IAppTitleProps> = props => {
 					)}
 					<Icon
 						className="mx-2"
-						color={theme === 'light' ? '#111' : '#fff'}
 						style={{ verticalAlign: 'middle' }}
 					/>
 					{titulo}

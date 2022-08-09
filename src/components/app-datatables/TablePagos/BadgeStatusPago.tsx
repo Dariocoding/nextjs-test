@@ -1,4 +1,4 @@
-import { Badge } from 'react-rainbow-components';
+import Badge from 'react-rainbow-components/components/Badge';
 import * as React from 'react';
 import { TypeStatusPago } from '../../../config/pagos/interfaces';
 

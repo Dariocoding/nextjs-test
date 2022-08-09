@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import * as React from 'react';
-
-import { NextLink } from '../@common';
+import { NextLink } from '../@common/Link';
 import Navbar from './Navbar';
 
 function Header() {
@@ -18,7 +17,7 @@ function Header() {
 
 	return (
 		<header
-			className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out dark:bg-slate-900 bg-sky-200 ${
+			className={`fixed w-full z-30 md:bg-opacity-90 transition duration-300 ease-in-out bg-sky-200 ${
 				!top && 'backdrop-blur-sm shadow-lg'
 			}`}
 		>

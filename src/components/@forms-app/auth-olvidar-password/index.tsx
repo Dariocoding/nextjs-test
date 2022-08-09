@@ -1,6 +1,6 @@
+import { FaLock } from '@/components/Icons/fa/FaLock';
 import { Form, Formik } from 'formik';
 import * as React from 'react';
-import { FaLock } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import clienteAxios from '../../../config/axios';
 import { usersConfig } from '../../../config/users';

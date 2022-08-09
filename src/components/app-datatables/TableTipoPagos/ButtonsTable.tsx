@@ -1,8 +1,10 @@
+import { Button } from '@/components/@common/Buttons';
+import { Dropdown } from '@/components/@common/Dropdown';
+import { BsThreeDotsVertical } from '@/components/Icons/bs/BsThreeDotsVertical';
+import { FaPen } from '@/components/Icons/fa/FaPen';
+import { FaTrash } from '@/components/Icons/fa/FaTrash';
 import * as React from 'react';
-import { BsThreeDotsVertical } from 'react-icons/bs';
-import { FaPen, FaTrash } from 'react-icons/fa';
 import { TipoPagoType } from '../../../config/tipospago/interfaces';
-import { Button, Dropdown } from '../../@common';
 
 interface IButtonsTableTiposPagoProps {
 	el: TipoPagoType;

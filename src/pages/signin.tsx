@@ -1,11 +1,15 @@
+import { NextLink } from '@/components/@common/Link';
+import { ButtonFormik } from '@/components/@forms/Button';
+import { InputFormik } from '@/components/@forms/Input';
+import { FaGithub } from '@/components/Icons/fa/socials/FaGithub';
+import { FaGoogle } from '@/components/Icons/fa/socials/FaGoogle';
+import { FaUserCircle } from '@/components/Icons/fa/users/FaUserCircle';
+import { handleError } from '@/utils/handleError';
 import { Form, Formik } from 'formik';
 import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
-import { FaGithub, FaGoogle, FaUserCircle } from 'react-icons/fa';
 import { toast } from 'react-toastify';
-import { NextLink } from '../components/@common';
-import { ButtonFormik, InputFormik } from '../components/@forms';
 import FormOlvidarPassword from '../components/@forms-app/auth-olvidar-password';
 import Header from '../components/Header';
 import LandingAuth from '../components/landing-auth';
@@ -14,7 +18,6 @@ import clienteAxios from '../config/axios';
 import { useAuthContext } from '../context/AuthState';
 import { useModal } from '../context/ModalState';
 import useIsAuthenticated from '../hooks/useIsAuthenticated';
-import { handleError } from '../utils';
 
 const SignIn: NextPage = () => {
 	const { usuarioAutenticado } = useAuthContext();
@@ -81,7 +84,7 @@ const SignIn: NextPage = () => {
 									onClick={
 										handleOlvidarPassword
 									}
-									className="cursor-pointer text-sm text-blue-600 dark:text-blue-400 dark:hover:text-blue-300 hover:underline"
+									className="cursor-pointer text-sm text-blue-600 hover:underline"
 								>
 									¿Olvidaste la contraseña?
 								</span>
@@ -92,11 +95,11 @@ const SignIn: NextPage = () => {
 							Iniciar Sesión
 						</ButtonFormik>
 
-						<div className="text-gray-600 dark:text-gray-300 text-center mt-6 text-lg">
+						<div className="text-gray-600 text-center mt-6 text-lg">
 							¿Todavía no posees una cuenta?{' '}
 							<NextLink
 								href="/signup"
-								className="text-blue-600 dark:text-blue-400 hover:underline dark:hover:text-blue-300 transition duration-150 ease-in-out"
+								className="text-blue-600 hover:underline transition duration-150 ease-in-out"
 							>
 								Registrarse
 							</NextLink>

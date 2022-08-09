@@ -1,6 +1,7 @@
+import dynamic from 'next/dynamic';
 import * as React from 'react';
-import Modal from '../../components/modal';
 import { SizeModal } from '../../components/modal/interfaces';
+const Modal = dynamic(() => import('../../components/modal'), { ssr: false });
 
 interface IModalStateProps {
 	children: React.ReactNode;

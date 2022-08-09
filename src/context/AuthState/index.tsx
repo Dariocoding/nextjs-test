@@ -1,14 +1,14 @@
-import * as React from 'react';
 import AuthReducer from './AuthReducer';
 import clienteAxios from '../../config/axios';
 import axios from 'axios';
 import tokenAuth from '../../config/token';
 import { OBTENER_USUARIO, LOGIN_ERROR, CERRAR_SESION, SET_LOCALSTORAGE_AT_RT } from '../types';
-import { BACKEND_URL } from '../../utils';
 import { authConfig } from '../../config/auth';
 import { UserType } from '../../config/users/interfaces';
+import { createContext, useContext, useEffect, useReducer, useState } from 'react';
+import { BACKEND_URL } from '@/utils/consts';
 
-const AuthContext = React.createContext<AuthInterface>({});
+const AuthContext = createContext<AuthInterface>({});
 
 export interface AuthInterface {
 	at?: string | null;
@@ -22,9 +22,9 @@ export interface AuthInterface {
 }
 
 const AuthState: React.FC<{ children: React.ReactNode }> = props => {
-	const [askingIsAuthenticated, setAskingIsAuthenticated] = React.useState(false);
+	const [askingIsAuthenticated, setAskingIsAuthenticated] = useState(false);
 
-	const [state, dispatch] = React.useReducer(AuthReducer, {
+	const [state, dispatch] = useReducer(AuthReducer, {
 		at: null,
 		rt: null,
 		autenticado: false,
@@ -40,7 +40,7 @@ const AuthState: React.FC<{ children: React.ReactNode }> = props => {
 		});
 	}
 
-	React.useEffect(() => {
+	useEffect(() => {
 		dispatch({
 			type: SET_LOCALSTORAGE_AT_RT,
 			payload: { at: localStorage.getItem('at'), rt: localStorage.getItem('rt') },
@@ -48,6 +48,7 @@ const AuthState: React.FC<{ children: React.ReactNode }> = props => {
 		const token = localStorage.getItem('at');
 		if (token) tokenAuth(token);
 		usuarioAutenticado();
+		// eslint-disable-next-line
 	}, []);
 
 	// Retorna el usuario autenticado
@@ -120,4 +121,4 @@ const AuthState: React.FC<{ children: React.ReactNode }> = props => {
 
 export default AuthState;
 
-export const useAuthContext = (): AuthInterface => React.useContext(AuthContext);
+export const useAuthContext = () => useContext(AuthContext);

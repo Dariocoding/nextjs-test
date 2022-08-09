@@ -1,10 +1,10 @@
 import { getIn } from 'formik';
 import * as React from 'react';
-import { Tile } from '../@common';
-import { TBodyProps, TheadProps, Table } from '../@common';
 import HeaderDataTable from './HeaderDataTable';
 import TableLoader from '../@placeholders/DataTablePlaceholder';
 import PaginatedItems from './PaginatedItems';
+import { Table, TBodyProps, TheadProps } from '../@common/Table';
+import { Tile } from '../@common/Tile';
 
 export type HeadingDataTableProps = TheadProps & { field: string };
 interface IDataTableProps {
@@ -85,20 +85,20 @@ const DataTable: React.FunctionComponent<IDataTableProps> = props => {
 				footer={
 					showPagination ? (
 						<div className="flex flex-col items-center py-3">
-							<span className="text-sm text-gray-700 dark:text-gray-400 select-none">
+							<span className="text-sm text-gray-700 select-none">
 								Showing{' '}
-								<span className="font-semibold text-gray-900 dark:text-white mx-1">
+								<span className="font-semibold text-gray-900 mx-1">
 									{itemOffset}
 								</span>{' '}
 								to{' '}
-								<span className="font-semibold text-gray-900 dark:text-white mx-1">
+								<span className="font-semibold text-gray-900 mx-1">
 									{itemOffset + 10 >
 									props.data.length
 										? props.data.length
 										: itemOffset + 10}
 								</span>{' '}
 								of{' '}
-								<span className="font-semibold text-gray-900 dark:text-white mx-1">
+								<span className="font-semibold text-gray-900 mx-1">
 									{props.data.length}
 								</span>{' '}
 								Entries

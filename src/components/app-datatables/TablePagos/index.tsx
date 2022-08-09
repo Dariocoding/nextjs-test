@@ -7,7 +7,6 @@ import DataTable, { HeadingDataTableProps } from '../../DataTable';
 import clienteAxios from '../../../config/axios';
 import { tipoPagoConfig } from '../../../config/tipospago';
 import HeadingPagos from './HeadingPagos';
-import { handleError, SMONEY } from '../../../utils';
 import { usersConfig } from '../../../config/users';
 import BotonesPagos from './ButtonsTable';
 import BadgeStatusPago from './BadgeStatusPago';
@@ -15,6 +14,8 @@ import dayjs from 'dayjs';
 import FormularioEditarPago from '../../@forms-app/pago-update';
 import ModalUsuarioPerfil from '../../app-modals/UsuarioPerfil';
 import { PagoType, PagoTypeTable } from '../../../config/pagos/interfaces';
+import { handleError } from '@/utils/handleError';
+import { SMONEY } from '@/utils/consts';
 
 interface IDataTablePagosProps {
 	urlRequest: string;

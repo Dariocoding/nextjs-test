@@ -63,7 +63,7 @@ input:focus {
 }
 
 .label-input {
-	@apply block mb-1 text-sm font-medium text-gray-900 dark:text-gray-300;
+	@apply block mb-1 text-sm font-medium text-gray-900;
 }
 
 .form-input,
@@ -81,16 +81,7 @@ input:focus {
 .form-select,
 .form-checkbox,
 .form-radio {
-	@apply border-gray-400 sm:text-base focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400;
-}
-
-.form-input,
-.form-textarea,
-.form-multiselect,
-.form-select,
-.form-checkbox,
-.form-radio {
-	@apply dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500;
+	@apply border-gray-400 sm:text-base focus:border-blue-500;
 }
 
 .form-input,

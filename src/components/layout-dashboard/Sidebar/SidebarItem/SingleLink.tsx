@@ -1,7 +1,7 @@
+import { NextLink } from '@/components/@common/Link';
 import { useRouter } from 'next/router';
 import * as React from 'react';
 import { classActiveItemInner, classItem, classItemInner } from '.';
-import { NextLink } from '../../../@common';
 import { RouteSidebar } from '../routesSidebar';
 
 interface ISingleLinkProps {
@@ -27,7 +27,7 @@ const SingleLink: React.FunctionComponent<ISingleLinkProps> = props => {
 						(isActive ? classActiveItemInner : '')
 					}
 				>
-					<Item.Icon className="mr-1" />
+					<Item.Icon className="mr-1" size={props.sizeIcon} />
 					<span className="select-none font-medium">
 						{Item.title}
 					</span>

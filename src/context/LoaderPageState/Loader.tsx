@@ -1,5 +1,5 @@
+import { FaSpinner2 } from '@/components/Icons/fa/FaSpinner2';
 import * as React from 'react';
-import { ImSpinner2 } from 'react-icons/im';
 
 interface ILoaderProps {
 	loading: boolean;
@@ -11,9 +11,9 @@ const Loader: React.FunctionComponent<ILoaderProps> = props => {
 	return (
 		<div
 			className="fixed w-full h-screen flex items-center justify-center bg-slate-900"
-			style={{ opacity: 0.9, zIndex: 9999999999999999 }}
+			style={{ opacity: 0.9, zIndex: 999999999999 }}
 		>
-			<ImSpinner2 size={60} color={'#fff'} className={'animate-spin-slow'} />
+			<FaSpinner2 size={60} color={'#fff'} className={'animate-spin-slow'} />
 		</div>
 	);
 };

@@ -1,10 +1,10 @@
+import { handleError } from '@/utils/handleError';
 import { Form, Formik } from 'formik';
 import * as React from 'react';
 import { toast } from 'react-toastify';
 import clienteAxios from '../../../config/axios';
 import { TipoPagoType } from '../../../config/tipospago/interfaces';
 import { useLoader } from '../../../context/LoaderPageState';
-import { handleError } from '../../../utils';
 import { ButtonFormik } from '../../@forms/Button';
 import { CheckboxToggleFormik } from '../../@forms/checkbox-toggle';
 import { InputFormik } from '../../@forms/Input';

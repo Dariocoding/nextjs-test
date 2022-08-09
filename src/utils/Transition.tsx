@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useRef } from 'react';
-import { CSSTransition as ReactCSSTransition } from 'react-transition-group';
+import ReactCSSTransition from 'react-transition-group/CSSTransition';
 
 interface ContextTransitionValues {
 	parent: {
@@ -49,7 +49,6 @@ const CSSTransition: React.FC<ICSSTransitionProps> = props => {
 		appear,
 		unmountOnExit,
 		tag = 'div',
-		...rest
 	} = props;
 
 	const enterClasses = enter.split(' ').filter(s => s.length);

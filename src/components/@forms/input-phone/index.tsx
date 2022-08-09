@@ -1,6 +1,6 @@
 import { FormikValues, getIn, useFormikContext } from 'formik';
 import * as React from 'react';
-import { PhoneInput as PhoneInputRainbow } from 'react-rainbow-components';
+import PhoneInputRainbow from 'react-rainbow-components/components/PhoneInput';
 import Label from '../Label';
 import { PhoneInputValue } from 'react-rainbow-components/components/PhoneInput';
 

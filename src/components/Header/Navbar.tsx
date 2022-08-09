@@ -1,11 +1,15 @@
 import * as React from 'react';
-import { FaArrowRight, FaBars, FaHome, FaSignOutAlt } from 'react-icons/fa';
-import { RenderIf } from 'react-rainbow-components';
+import RenderIf from 'react-rainbow-components/components/RenderIf';
+import Drawer from 'react-rainbow-components/components/Drawer';
 import { useAuthContext } from '../../context/AuthState';
 import { useLoader } from '../../context/LoaderPageState';
-import { Drawer } from 'react-rainbow-components';
-import { Button, NextLink } from '../@common';
 import Image from 'next/image';
+import { Button } from '../@common/Buttons';
+import { NextLink } from '../@common/Link';
+import { FaHome } from '../Icons/fa/FaHome';
+import { FaSignOut } from '../Icons/fa/FaSignOut';
+import { FaBars } from '../Icons/fa/FaBars';
+import { FaArrowRight } from '../Icons/fa/arrows/FaArrowRight';
 
 const Navbar: React.FC = () => {
 	const [openedDrawer, setOpenedDrawer] = React.useState(false);
@@ -35,7 +39,7 @@ const Navbar: React.FC = () => {
 					</li>
 					<li className="hidden md:block">
 						<Button variant="default" onClick={handleLogout}>
-							<span>Logout</span> <FaSignOutAlt />
+							<span>Logout</span> <FaSignOut />
 						</Button>
 					</li>
 				</RenderIf>
@@ -64,7 +68,7 @@ const Navbar: React.FC = () => {
 
 				<li className="block md:hidden">
 					<FaBars
-						className="dark:text-white cursor-pointer"
+						className="cursor-pointer"
 						size={25}
 						onClick={toggleDrawer}
 					/>
@@ -100,7 +104,7 @@ const Navbar: React.FC = () => {
 								variant="default"
 								onClick={handleLogout}
 							>
-								<span>Logout</span> <FaSignOutAlt />
+								<span>Logout</span> <FaSignOut />
 							</Button>
 						</li>
 					</RenderIf>

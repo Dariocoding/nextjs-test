@@ -1,11 +1,12 @@
-import { FaPrint } from 'react-icons/fa';
 import { useConfigContext } from '../../context/ConfigState';
-import { Button, Table, TdTable, TrTable } from '../@common';
-import { SMONEY } from '../../utils';
 import * as React from 'react';
 import dayjs from 'dayjs';
 import { DetallePagoType, PagoType } from '../../config/pagos/interfaces';
 import Image from 'next/image';
+import { Button } from '../@common/Buttons';
+import { Table, TdTable, TrTable } from '../@common/Table';
+import { SMONEY } from '@/utils/consts';
+import { FaPrint } from '../Icons/fa/FaPrint';
 
 interface IInvoicePagoProps {
 	pago: PagoType;
@@ -55,9 +56,7 @@ const InvoicePago: React.FunctionComponent<IInvoicePagoProps> = props => {
 								target="_blank"
 								rel="noreferrer"
 								href={configuracion.web}
-								className={
-									'text-black dark:text-white'
-								}
+								className={'text-black'}
 							>
 								{configuracion.web}
 							</a>

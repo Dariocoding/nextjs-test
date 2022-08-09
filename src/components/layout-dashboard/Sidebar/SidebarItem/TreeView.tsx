@@ -1,8 +1,10 @@
+import { NextLink } from '@/components/@common/Link';
+import { FaChevronDown } from '@/components/Icons/fa/arrows/FaChevronDown';
+import { FaChevronLeft } from '@/components/Icons/fa/arrows/FaChevronLeft';
+import { FaCircleNotch } from '@/components/Icons/fa/FaCircleNotch';
 import { useRouter } from 'next/router';
 import * as React from 'react';
-import { FaChevronDown, FaChevronLeft, FaCircleNotch } from 'react-icons/fa';
 import { classActiveItemInner, classItem, classItemInner } from '.';
-import { NextLink } from '../../../@common';
 import { RouteSidebar } from '../routesSidebar';
 
 interface ITreeViewProps {
@@ -67,10 +69,6 @@ const TreeView: React.FunctionComponent<ITreeViewProps> = props => {
                         text-white
                         hover:bg-slate-300
                         hover:text-black
-                        dark:bg-slate-700
-                        dark:hover:bg-slate-900
-                        dark:text-white
-                        dark:hover:text-white
                         font-medium
                         transition
                         select-none
@@ -86,26 +84,5 @@ const TreeView: React.FunctionComponent<ITreeViewProps> = props => {
 		</div>
 	);
 };
-
-/* export const classItemInner = classNames(
-	'py-4',
-	'px-4',
-	'text-sm',
-	'flex',
-	'hover:bg-slate-300',
-
-);
-
-export const classActiveItemInner = classNames(
-	' ',
-	'bg-slate-300',
-	'hover:bg-slate-300',
-	'dark:bg-slate-900',
-	'dark:hover:bg-slate-900',
-	'dark:text-white',
-	'dark:hover:text-white',
-	'text-black',
-	'cursor-default',
-	'text-sm' */
 
 export default TreeView;

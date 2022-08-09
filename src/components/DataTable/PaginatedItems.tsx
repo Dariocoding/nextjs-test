@@ -1,7 +1,8 @@
 import classNames from 'classnames';
 import React from 'react';
-import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import ReactPaginate from 'react-paginate';
+import { FaChevronLeft } from '../Icons/fa/arrows/FaChevronLeft';
+import { FaChevronRight } from '../Icons/fa/arrows/FaChevronRight';
 
 interface IPaginatedItemsProps {
 	itemsPerPage: number;

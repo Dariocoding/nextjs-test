@@ -1,16 +1,18 @@
 import { toast } from 'react-toastify';
 import clienteAxios from '../../../config/axios';
-import { SMONEY, handleError, OptionsEstadosPago } from '../../../utils';
 import { Formik, Form } from 'formik';
 import { ButtonFormik } from '../../@forms/Button';
 
 import { useModal } from '../../../context/ModalState';
 import { pagosConfig } from '../../../config/pagos';
-import { Table } from '../../@common';
 import { InputFormik } from '../../@forms/Input';
 import { SelectDefaultFormik } from '../../@forms/select-default';
 import { PagoType } from '../../../config/pagos/interfaces';
 import { TipoPagoType } from '../../../config/tipospago/interfaces';
+import { Table } from '@/components/@common/Table';
+import { handleError } from '@/utils/handleError';
+import { SMONEY } from '@/utils/consts';
+import { OptionsEstadosPago } from '@/utils/estadosPago';
 interface IFrmEditarPagoProps {
 	pago: PagoType;
 	tipospago: TipoPagoType[];

@@ -1,10 +1,12 @@
 import React from 'react';
-import { FaFacebook, FaGithub, FaTwitter } from 'react-icons/fa';
-import { NextLink } from '../@common';
+import { NextLink } from '../@common/Link';
+import { FaFacebook } from '../Icons/fa/socials/FaFacebook';
+import { FaGithub } from '../Icons/fa/socials/FaGithub';
+import { FaTwitter } from '../Icons/fa/socials/FaTwitter';
 
 function Footer() {
 	return (
-		<footer className="dark:bg-slate-800">
+		<footer>
 			<div className="max-w-6xl mx-auto px-4 sm:px-6 ">
 				{/* Top area: Blocks */}
 				<div className="grid sm:grid-cols-12 gap-8 py-8 md:py-12 border-t border-gray-200 ">
@@ -55,17 +57,17 @@ function Footer() {
 								</svg>
 							</NextLink>
 						</div>
-						<div className="text-sm text-gray-600 dark:text-gray-100">
+						<div className="text-sm text-gray-600">
 							<NextLink
 								href="#"
-								className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 hover:underline transition duration-150 ease-in-out"
+								className="text-gray-600 hover:text-gray-900 hover:underline transition duration-150 ease-in-out"
 							>
 								Terms
 							</NextLink>{' '}
 							·{' '}
 							<NextLink
 								href="#"
-								className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 hover:underline transition duration-150 ease-in-out"
+								className="text-gray-600 hover:text-gray-900 hover:underline transition duration-150 ease-in-out"
 							>
 								Privacy Policy
 							</NextLink>
@@ -81,7 +83,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Web Studio
 								</NextLink>
@@ -89,7 +91,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									DynamicBox Flex
 								</NextLink>
@@ -97,7 +99,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Programming Forms
 								</NextLink>
@@ -105,7 +107,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Integrations
 								</NextLink>
@@ -113,7 +115,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Command-line
 								</NextLink>
@@ -130,7 +132,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Documentation
 								</NextLink>
@@ -138,7 +140,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Tutorials & Guides
 								</NextLink>
@@ -146,7 +148,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Blog
 								</NextLink>
@@ -154,7 +156,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Support Center
 								</NextLink>
@@ -162,7 +164,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Partners
 								</NextLink>
@@ -179,7 +181,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Home
 								</NextLink>
@@ -187,7 +189,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									About us
 								</NextLink>
@@ -195,7 +197,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Company values
 								</NextLink>
@@ -203,7 +205,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Pricing
 								</NextLink>
@@ -211,7 +213,7 @@ function Footer() {
 							<li className="mb-2">
 								<NextLink
 									href="#"
-									className="text-gray-600 dark:text-gray-100 hover:text-gray-900 dark:hover:text-gray-300 transition duration-150 ease-in-out"
+									className="text-gray-600 hover:text-gray-900 transition duration-150 ease-in-out"
 								>
 									Privacy Policy
 								</NextLink>
@@ -224,7 +226,7 @@ function Footer() {
 						<h6 className="text-gray-800 font-medium mb-2">
 							Subscribe
 						</h6>
-						<p className="text-sm text-gray-600 dark:text-gray-100 mb-4">
+						<p className="text-sm text-gray-600 mb-4">
 							Get the latest news and articles to your
 							inbox every month.
 						</p>
@@ -308,7 +310,7 @@ function Footer() {
 					</ul>
 
 					{/* Copyrights note */}
-					<div className="text-sm text-gray-600 dark:text-gray-100 mr-4">
+					<div className="text-sm text-gray-600 mr-4">
 						Made by{' '}
 						<a
 							className="text-blue-600 hover:underline"

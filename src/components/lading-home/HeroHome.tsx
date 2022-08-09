@@ -1,8 +1,6 @@
-import React from 'react';
-
 const HeroHome: React.FC = () => {
 	return (
-		<React.Fragment>
+		<>
 			<section className="relative overflow-hidden md:h-[85vh] h-[100vh] bg-[url(/images/bg-hero.jpg)] bg-cover bg-center">
 				<div className="max-w-6xl mx-auto px-4 sm:px-6">
 					{/* Hero content */}
@@ -47,7 +45,7 @@ const HeroHome: React.FC = () => {
 					</div>
 				</div>
 			</section>
-		</React.Fragment>
+		</>
 	);
 };
 

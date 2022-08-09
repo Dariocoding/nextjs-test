@@ -1,10 +1,10 @@
+import { handleError } from '@/utils/handleError';
 import { Form, Formik } from 'formik';
 import * as React from 'react';
 import { toast } from 'react-toastify';
 import clienteAxios from '../../../config/axios';
 import { SettingsConfig } from '../../../config/settings';
 import { useConfigContext } from '../../../context/ConfigState';
-import { handleError } from '../../../utils';
 import { ButtonFormik } from '../../@forms/Button';
 import { InputFormik } from '../../@forms/Input';
 

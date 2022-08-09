@@ -1,5 +1,5 @@
+import { BACKEND_URL } from '@/utils/consts';
 import axios from 'axios';
-import { BACKEND_URL } from '../utils';
 const clienteAxios = axios.create({
 	baseURL: BACKEND_URL,
 });

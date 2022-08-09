@@ -1,4 +1,4 @@
-import { CheckboxToggle as CheckboxToggleRainbow } from 'react-rainbow-components';
+import CheckboxToggleRainbow from 'react-rainbow-components/components/CheckboxToggle';
 
 import * as React from 'react';
 import { FormikValues, getIn, useFormikContext } from 'formik';

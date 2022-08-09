@@ -1,5 +1,5 @@
+import { FaMoon } from '@/components/Icons/fa/FaMoon';
 import React, { useState, useRef, useEffect } from 'react';
-import { FaMoon } from 'react-icons/fa';
 import TabButton from './TabButton';
 import TransitionImage from './TransitionImage';
 
@@ -48,7 +48,7 @@ function Features() {
 					<div className="md:grid md:grid-cols-12 md:gap-6">
 						{/* Content */}
 						<div className="max-w-xl md:max-w-none md:w-full mx-auto md:col-span-7 lg:col-span-6 md:mt-6">
-							<div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8 dark:text-white">
+							<div className="md:pr-4 lg:pr-12 xl:pr-16 mb-8">
 								<h3 className="h3 mb-3">
 									Powerful suite of tools
 								</h3>

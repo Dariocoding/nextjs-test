@@ -11,7 +11,6 @@ interface ITileProps {
 const tileClass = classNames(
 	'relative',
 	'bg-slate-100',
-	'dark:bg-slate-800',
 	'rounded-md',
 	'p-4',
 	'shadow-xl',

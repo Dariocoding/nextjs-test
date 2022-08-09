@@ -1,19 +1,20 @@
 import { Form, Formik, FormikHelpers } from 'formik';
-import {
-	InputFormik,
-	ButtonFormik,
-	SelectDefaultFormik,
-	PhoneInputFormik,
-	DatePickerFormik,
-} from '../../@forms';
 import * as React from 'react';
 import validarFormUsuario from './validation';
 import { useAuthContext } from '../../../context/AuthState';
-import { handleError, OptionsEstadosVenezuela, PaisesOptions, RADMIN } from '../../../utils';
 import { toast } from 'react-toastify';
 import clienteAxios from '../../../config/axios';
 import { INITIAL_VALUES_USER_PROFILE } from './initial-values';
 import { UserType } from '../../../config/users/interfaces';
+import { InputFormik } from '@/components/@forms/Input';
+import { PhoneInputFormik } from '@/components/@forms/input-phone';
+import { SelectDefaultFormik } from '@/components/@forms/select-default';
+import { DatePickerFormik } from '@/components/@forms/date-picker';
+import { ButtonFormik } from '@/components/@forms/Button';
+import { handleError } from '@/utils/handleError';
+import { RADMIN } from '@/utils/consts';
+import { PaisesOptions } from '@/utils/paises';
+import { OptionsEstadosVenezuela } from '@/utils/estados-venezuela';
 
 interface IFormPerfilUserProps {
 	url: string;

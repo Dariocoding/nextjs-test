@@ -20,14 +20,13 @@ export const Table: React.FunctionComponent<ITableProps> = props => {
 		'relative',
 		'overflow-x-auto',
 		'shadow-gray-300',
-		'dark:shadow-gray-900',
 		'rounded-lg',
 		props.className ? props.className : '',
 	]);
 	return (
 		<div className={tableClass}>
-			<table className="w-full text-sm text-left text-gray-500 dark:text-gray-400 rounded-t-lg">
-				<thead className="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
+			<table className="w-full text-sm text-left text-gray-500 rounded-t-lg">
+				<thead className="text-xs text-gray-700 uppercase bg-gray-50">
 					<tr>
 						{thead.map((t, index) => (
 							<th
@@ -88,10 +87,7 @@ export const TrTable: React.FC<ITrTableProps> = props => (
 		className={classNames(
 			'bg-white',
 			'border-b',
-			'dark:bg-gray-900',
-			'dark:border-gray-100',
 			{ 'hover:bg-gray-200': props.tableHover },
-			{ 'dark:hover:bg-gray-600': props.tableHover },
 			props.className
 		)}
 	>
@@ -111,7 +107,6 @@ export const TdTable: React.FC<TdTableProps> = props => (
 		width={props.width}
 		colSpan={props.colSpan}
 		className={classNames([
-			'dark:text-white',
 			'px-4',
 			'py-4',
 			'text-center',
@@ -119,7 +114,6 @@ export const TdTable: React.FC<TdTableProps> = props => (
 			'text-gray-900',
 			'border-r',
 			'border-b',
-			'dark:border-gray-600',
 			props.className,
 		])}
 	>

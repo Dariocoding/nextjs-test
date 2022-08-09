@@ -1,6 +1,6 @@
+import { IconType } from '@/components/Icons/libs';
 import { useRouter } from 'next/router';
 import * as React from 'react';
-import { IconType } from 'react-icons';
 import styled from 'styled-components';
 
 interface IStatusCardProps {
@@ -63,14 +63,14 @@ export const StatusCard: React.FC<IStatusCardProps> = props => {
 	return (
 		<StatusCardDiv
 			backgroundHoverColor={props.hoverBackgroundColor}
-			className={'dark:bg-slate-800 bg-slate-100 dark:text-slate-100'}
+			className={'bg-slate-100'}
 			onClick={() => push(props.to)}
 		>
 			<div className={'w-1/4 h-full flex items-center justify-center z-[1]'}>
-				<props.Icon size={35} />
+				<props.Icon size={45} />
 			</div>
 			<div className="grow text-center z-[1] capitalize font-semibold">
-				<h4 className="text-3xl mb-2">{props.count}</h4>
+				<h4 className="text-1xl md:text-3xl mb-2">{props.count}</h4>
 				<span>{props.title}</span>
 			</div>
 		</StatusCardDiv>

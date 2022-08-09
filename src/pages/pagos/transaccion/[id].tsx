@@ -1,9 +1,12 @@
+import { Button } from '@/components/@common/Buttons';
+import { NextLink } from '@/components/@common/Link';
+import { Tile } from '@/components/@common/Tile';
+import { FaArrowLeft } from '@/components/Icons/fa/arrows/FaArrowLeft';
+import { FaPaypal } from '@/components/Icons/fa/FaPaypal';
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
 import { useRouter } from 'next/router';
 import * as React from 'react';
-import { FaArrowLeft, FaPaypal } from 'react-icons/fa';
-import { Button, NextLink, Tile } from '../../../components/@common';
 import Tile404 from '../../../components/@common/404Tile';
 import NextHead from '../../../components/@common/next-head';
 import DashboardLoader from '../../../components/@placeholders/DashboardPlaceholder';

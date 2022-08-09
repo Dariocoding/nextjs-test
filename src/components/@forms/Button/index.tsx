@@ -1,7 +1,7 @@
+import { FaSpinner2 } from '@/components/Icons/fa/FaSpinner2';
 import { useFormikContext } from 'formik';
 import * as React from 'react';
 import { OptionsColors } from '../../../extensions';
-import { ImSpinner8 } from 'react-icons/im';
 import { Button } from '../../@common/Buttons';
 
 interface IButtonFormikProps {
@@ -25,7 +25,7 @@ export const ButtonFormik: React.FC<IButtonFormikProps> = props => {
 			className={props.className}
 		>
 			{!isSubmitting ? props.children : null}
-			{isSubmitting ? <ImSpinner8 className="ml-1 animate-spin" /> : null}
+			{isSubmitting ? <FaSpinner2 color="#fff" className="animate-spin" /> : null}
 		</Button>
 	);
 };

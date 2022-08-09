@@ -2,14 +2,14 @@ import classNames from 'classnames';
 import SidebarItem from './SidebarItem';
 import * as React from 'react';
 import routesSidebar from './routesSidebar';
-import { NextLink } from '../../@common';
-import { FaSignOutAlt } from 'react-icons/fa';
 import { classItem, classItemInner } from './SidebarItem';
 import { useLoader } from '../../../context/LoaderPageState';
 import { useAuthContext } from '../../../context/AuthState';
 import useWindowSize from '../../../hooks/useWindowSize';
 import useRefVisible from '../../../hooks/useRefVisible';
 import Image from 'next/image';
+import { NextLink } from '@/components/@common/Link';
+import { FaSignOut } from '@/components/Icons/fa/FaSignOut';
 
 interface ISidebarProps {
 	isOpenedSidebar: boolean;
@@ -34,7 +34,6 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = props => {
 		{ ['-left-[var(--sidebar-width)]']: windowSize.width < 768 && !isOpenedSidebar },
 		'top-0',
 		'bg-slate-800',
-		'dark:bg-slate-800',
 		'bg-slate-900',
 		'shadow-lg',
 		'z-[100]',
@@ -84,7 +83,7 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = props => {
 
 			<div className={classItem} onClick={handleLogout}>
 				<div className={classItemInner}>
-					<FaSignOutAlt className="mr-1" />
+					<FaSignOut className="mr-1" />
 					<span className="select-none font-medium">
 						Cerrar Sesión
 					</span>

@@ -3,22 +3,22 @@ import { NextPage } from 'next';
 import { useRouter } from 'next/router';
 import React from 'react';
 import { toast } from 'react-toastify';
-import { NextLink } from '../components/@common';
-import {
-	ButtonFormik,
-	InputFormik,
-	PhoneInputFormik,
-	SelectDefaultFormik,
-} from '../components/@forms';
 import { INITIAL_VALUES_USER_PROFILE } from '../components/@forms-app/user-perfil/initial-values';
 import Header from '../components/Header';
 import LandingAuth from '../components/landing-auth';
 import { authConfig } from '../config/auth';
 import clienteAxios from '../config/axios';
 import useIsAuthenticated from '../hooks/useIsAuthenticated';
-import { handleError, PaisesOptions, RUSUARIO } from '../utils';
 import Swal from 'sweetalert2';
 import { UserType } from '../config/users/interfaces';
+import { InputFormik } from '@/components/@forms/Input';
+import { PhoneInputFormik } from '@/components/@forms/input-phone';
+import { ButtonFormik } from '@/components/@forms/Button';
+import { NextLink } from '@/components/@common/Link';
+import { SelectDefaultFormik } from '@/components/@forms/select-default';
+import { RUSUARIO } from '@/utils/consts';
+import { handleError } from '@/utils/handleError';
+import { PaisesOptions } from '@/utils/paises';
 
 const SignUp: NextPage = () => {
 	const router = useRouter();
@@ -191,11 +191,11 @@ const SignUp: NextPage = () => {
 							Registrarse
 						</ButtonFormik>
 
-						<div className="text-gray-600 dark:text-gray-300 text-center mt-6 text-lg">
+						<div className="text-gray-600 text-center mt-6 text-lg">
 							¿Ya posees una cuenta?{' '}
 							<NextLink
 								href="/signin"
-								className="text-blue-600 dark:text-blue-400 hover:underline dark:hover:text-blue-300 transition duration-150 ease-in-out"
+								className="text-blue-600 hover:underline transition duration-150 ease-in-out"
 							>
 								Iniciar Sesión
 							</NextLink>

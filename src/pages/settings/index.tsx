@@ -1,14 +1,14 @@
 import * as React from 'react';
-import { FaCogs } from 'react-icons/fa';
-import { Tile } from '../../components/@common';
 import FormUpdateConfig from '../../components/@forms-app/config-update';
-import CardSetting from '../../components/settings-card';
+import CardSetting from '../../components/@common/settings-card';
 import { tipoPagoConfig } from '../../config/tipospago';
 import { NextPage } from 'next';
 import NextHead from '../../components/@common/next-head';
 import useValidarPermisosPagina from '../../hooks/useValidarPermisosPagina';
-import { RADMIN } from '../../utils';
 import dynamic from 'next/dynamic';
+import { Tile } from '@/components/@common/Tile';
+import { RADMIN } from '@/utils/consts';
+import { FaCogs } from '@/components/Icons/fa/FaCogs';
 
 const PageContentAdmin = dynamic(() => import('../../components/layout-dashboard/PageContent'), {
 	ssr: false,

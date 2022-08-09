@@ -1,7 +1,7 @@
+import { NextLink } from '@/components/@common/Link';
+import { FaHome } from '@/components/Icons/fa/FaHome';
 import classNames from 'classnames';
 import * as React from 'react';
-import { FaHome } from 'react-icons/fa';
-import { NextLink } from '../../@common';
 
 type BreadcrumbType = Array<{ link?: string; titulo: string }>;
 export interface IBreadCrumbProps {
@@ -19,20 +19,14 @@ const BreadCrumb: React.FC<IBreadCrumbProps> = ({ breadCrumb }) => {
 	return (
 		<ul className="mb-0 text-left uppercasse bg-transparent flex rounded-sm flex-wrap list-none p-3 text-xs">
 			<li className="flex items-center mr-2">
-				<NextLink
-					href={'/dashboard'}
-					className={'dark:text-white text-black'}
-				>
+				<NextLink href={'/dashboard'} className={'text-black'}>
 					<FaHome />
 				</NextLink>
 			</li>
 			{breadCrumb.map(({ link, titulo }) => (
 				<li key={titulo} className={BreadCrumbItem}>
 					{link ? (
-						<NextLink
-							href={link}
-							className={'dark:text-white text-black'}
-						>
+						<NextLink href={link} className={'text-black'}>
 							{titulo}
 						</NextLink>
 					) : (

@@ -1,5 +1,6 @@
 import * as React from 'react';
-import { SearchDatePicker, Tile } from '../@common';
+import { SearchDatePicker } from '../@common/DatePicker';
+import { Tile } from '../@common/Tile';
 import BarChart from '../Charts/BarChart';
 import { USERS } from '../Charts/ChartPie';
 

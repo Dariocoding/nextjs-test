@@ -1,6 +1,6 @@
-import { Transition } from '../../../utils';
 import * as React from 'react';
 import Image from 'next/image';
+import { Transition } from '@/utils/Transition';
 
 interface ITransitionImageProps {
 	tabSelected: number;

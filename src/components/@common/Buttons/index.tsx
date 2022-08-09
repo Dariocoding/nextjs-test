@@ -18,7 +18,6 @@ export const Button: React.FC<IButtonProps> = props => {
 	const classButton = classNames([
 		'disabled:cursor-not-allowed',
 		{ 'text-white': props.variant !== 'default' },
-		{ 'dark:text-white': props.variant === 'default' },
 		{ [`bg-${props.variant}`]: props.variant !== 'default' },
 		{ [`hover:bg-${props.variant}Hover`]: props.variant !== 'default' },
 		'focus:outline-none',
@@ -60,7 +59,6 @@ export const ButtonOutline: React.FC<IButtonProps & { textVariant?: boolean }> =
 		'hover:text-white',
 		{ 'w-full': props.full },
 		'focus:outline-none',
-		'dark:text-white',
 		'font-medium',
 		'rounded-lg',
 		'text-sm',

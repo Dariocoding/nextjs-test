@@ -19,9 +19,6 @@ export const classItemInner = classNames(
 	'flex',
 	'hover:bg-slate-200',
 	'hover:text-black',
-	'dark:hover:bg-slate-900',
-	'dark:text-white',
-	'dark:hover:text-white',
 	'items-center',
 	'font-semibold',
 	'transition'
@@ -31,10 +28,6 @@ export const classActiveItemInner = classNames(
 	' ',
 	'bg-slate-200',
 	'hover:bg-slate-200',
-	'dark:bg-slate-900',
-	'dark:hover:bg-slate-900',
-	'dark:text-white',
-	'dark:hover:text-white',
 	'text-black',
 	'cursor-default',
 	'text-sm'

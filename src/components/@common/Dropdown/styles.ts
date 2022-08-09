@@ -32,7 +32,6 @@ export const DropdownContent = classNames(
 	'max-w-[200px]',
 	'max-h-32',
 	'bg-slate-100',
-	'dark:bg-slate-800',
 	'shadow-md',
 	'rounded-lg',
 	'overflow-hidden',

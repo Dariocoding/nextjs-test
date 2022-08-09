@@ -1,5 +1,3 @@
-import { FaLock, FaPlus, FaRegUserCircle } from 'react-icons/fa';
-import { handleError, DeleteInfo } from '../../../utils';
 import clienteAxios from '../../../config/axios';
 import * as React from 'react';
 import { usersConfig } from '../../../config/users';
@@ -15,8 +13,13 @@ import { HeadingDataTableProps } from '../../DataTable';
 // HOOKS
 import { useModal } from '../../../context/ModalState';
 import { useLoader } from '../../../context/LoaderPageState';
-import { Button } from '../../@common';
 import FormChangePaswword from '../../@forms-app/user-change-password';
+import { Button } from '@/components/@common/Buttons';
+import { handleError } from '@/utils/handleError';
+import { DeleteInfo } from '@/utils/delete-info';
+import { FaUserCircle } from '@/components/Icons/fa/users/FaUserCircle';
+import { FaPlus } from '@/components/Icons/fa/FaPlus';
+import { FaLock } from '@/components/Icons/fa/FaLock';
 
 const { endpoints } = usersConfig;
 
@@ -90,9 +93,9 @@ const DataTableUsuario: React.FunctionComponent<IDataTableUsuariosProps> = props
 				content: (
 					<div className="grid grid-flow-row grid-cols-1 lg:grid-cols-2 gap-4">
 						<div>
-							<h4 className="text-center text-2xl font-bold dark:font-medium flex justify-center items-center mb-3 space-x-3">
+							<h4 className="text-center text-2xl font-bold flex justify-center items-center mb-3 space-x-3">
 								<span>Datos Personales</span>{' '}
-								<FaRegUserCircle />
+								<FaUserCircle />
 							</h4>
 							<FormPerfilUser
 								user={user}
@@ -104,7 +107,7 @@ const DataTableUsuario: React.FunctionComponent<IDataTableUsuariosProps> = props
 							/>
 						</div>
 						<div>
-							<h4 className="text-center text-2xl font-bold dark:font-medium flex justify-center items-center mb-3 space-x-3">
+							<h4 className="text-center text-2xl font-bold flex justify-center items-center mb-3 space-x-3">
 								<span>Cambiar Contraseña</span>{' '}
 								<FaLock />
 							</h4>

@@ -1,9 +1,11 @@
 import React from 'react';
-import { FaAirbnb, FaHubspot, FaAmazon } from 'react-icons/fa';
-import { SiTinder } from 'react-icons/si';
-import { IoLogoFacebook } from 'react-icons/io';
 import Testimonial from './Testimonial';
 import Image from 'next/image';
+import { FaFacebook } from '@/components/Icons/fa/socials/FaFacebook';
+import { FaTinder } from '@/components/Icons/fa/socials/FaTinder';
+import { FaAirbnb } from '@/components/Icons/fa/socials/FaAirbnb';
+import { FaHubspot } from '@/components/Icons/fa/socials/FaHubspot';
+import { FaAmazon } from '@/components/Icons/fa/socials/FaAmazon';
 
 function Testimonials() {
 	return (
@@ -27,8 +29,8 @@ function Testimonials() {
 
 					{/* Items */}
 					<div className="max-w-sm md:max-w-4xl mx-auto grid gap-2 grid-cols-4 md:grid-cols-5">
-						<Testimonial Icon={IoLogoFacebook} />
-						<Testimonial Icon={SiTinder} />
+						<Testimonial Icon={FaFacebook} />
+						<Testimonial Icon={FaTinder} />
 						<Testimonial Icon={FaAirbnb} />
 						<Testimonial Icon={FaHubspot} />
 						<Testimonial Icon={FaAmazon} />
@@ -36,7 +38,7 @@ function Testimonials() {
 
 					{/* Testimonials */}
 					<div className="max-w-3xl mx-auto mt-20">
-						<div className="relative flex items-start border-2 border-gray-200 rounded bg-white dark:bg-slate-900">
+						<div className="relative flex items-start border-2 border-gray-200 rounded bg-white">
 							{/* Testimonial */}
 							<div className="text-center px-12 py-8 pt-20 mx-4 md:mx-0">
 								<div className="absolute top-0 -mt-8 left-1/2 transform -translate-x-1/2">
@@ -70,7 +72,7 @@ function Testimonials() {
 								<cite className="block font-bold text-lg not-italic mb-1">
 									Darya Finger
 								</cite>
-								<div className="text-gray-600 dark:text-gray-300">
+								<div className="text-gray-600">
 									<span>
 										CEO & Co-Founder
 									</span>{' '}

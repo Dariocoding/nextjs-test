@@ -1,5 +1,5 @@
+import { IconType } from '@/components/Icons/libs';
 import * as React from 'react';
-import { IconType } from 'react-icons';
 
 interface ITabButtonProps {
 	tabSelected: number;
@@ -14,7 +14,7 @@ const TabButton: React.FC<ITabButtonProps> = props => (
 	<a
 		className={`flex items-center text-lg p-5 rounded border transition duration-300 ease-in-out mb-3 ${
 			props.tabSelected !== props.tab
-				? 'bg-white dark:bg-slate-900 shadow-md border-gray-200 hover:shadow-lg'
+				? 'bg-white shadow-md border-gray-200 hover:shadow-lg'
 				: 'border-transparent'
 		}`}
 		href="#0"
@@ -27,7 +27,7 @@ const TabButton: React.FC<ITabButtonProps> = props => (
 			<div className="font-bold leading-snug tracking-tight mb-1">
 				{props.title}
 			</div>
-			<div className="text-gray-600 dark:text-gray-300">{props.description}</div>
+			<div className="text-gray-600">{props.description}</div>
 		</div>
 		<div className="flex justify-center items-center w-8 h-8 bg-white rounded-full shadow flex-shrink-0 ml-3">
 			<props.Icon className="w-3 h-3" color="#000" />

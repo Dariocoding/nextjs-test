@@ -3,15 +3,18 @@ import * as React from 'react';
 import useFetch from '../../../hooks/useFetch';
 import { tipoPagoConfig } from '../../../config/tipospago';
 import { HeadingTableTiposPago } from './Heading';
-import { Button, Tile } from '../../@common';
 import TipoPagoForm from '../../@forms-app/tipoPago';
-import { FaPen, FaPlus } from 'react-icons/fa';
 import ButtonsTableTiposPago from './ButtonsTable';
-import { DeleteInfo, handleError } from '../../../utils';
 import clienteAxios from '../../../config/axios';
 import { useLoader } from '../../../context/LoaderPageState';
-import { RenderIf } from 'react-rainbow-components';
+import RenderIf from 'react-rainbow-components/components/RenderIf';
 import { TipoPagoType, TipoPagoTypeTable } from '../../../config/tipospago/interfaces';
+import { Button } from '@/components/@common/Buttons';
+import { Tile } from '@/components/@common/Tile';
+import { handleError } from '@/utils/handleError';
+import { DeleteInfo } from '@/utils/delete-info';
+import { FaPen } from '@/components/Icons/fa/FaPen';
+import { FaPlus } from '@/components/Icons/fa/FaPlus';
 
 interface ITableTiposPagoProps {}
 

@@ -1,18 +1,16 @@
-import TitleAdminPlaceholder from '@/components/@placeholders/TitleAdminPlaceholder';
+import { Tab, TabSet } from '@/components/@common/Tabs';
+import { RADMIN } from '@/utils/consts';
 import { NextPage } from 'next';
 import dynamic from 'next/dynamic';
-import * as React from 'react';
-import { Tab, TabSet } from '../../components/@common';
+import { useState } from 'react';
 import NextHead from '../../components/@common/next-head';
 import TableLoader from '../../components/@placeholders/DataTablePlaceholder';
 import { usersConfig } from '../../config/users';
 import { UserConfigInterface } from '../../config/users/interfaces';
 import useValidarPermisosPagina from '../../hooks/useValidarPermisosPagina';
-import { RADMIN } from '../../utils';
 
 const PageContentAdmin = dynamic(() => import('../../components/layout-dashboard/PageContent'), {
 	ssr: false,
-	loading: () => <TitleAdminPlaceholder />,
 });
 
 const DataTableUsuario = dynamic(() => import('../../components/app-datatables/TableUsuarios'), {
@@ -22,7 +20,7 @@ const DataTableUsuario = dynamic(() => import('../../components/app-datatables/T
 
 const Usuarios: NextPage = () => {
 	useValidarPermisosPagina({ rolesPermisos: [RADMIN], urlReturn: '/dashboard' });
-	const [userConfigActual, setUserConfigActual] = React.useState('administrador');
+	const [userConfigActual, setUserConfigActual] = useState('administrador');
 	const keys = Object.keys(usersConfig).filter(u => u !== 'endpoints');
 	const configuracion = usersConfig[userConfigActual] as UserConfigInterface;
 

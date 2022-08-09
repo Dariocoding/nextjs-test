@@ -4,13 +4,14 @@ import 'react-datepicker/dist/react-datepicker.css';
 
 const INPUT_SEARCH = styled(DatePicker)`
 	border: 0;
-	padding: 5px 10px;
+	padding: 10px;
 	padding-right: 30px;
 	border-radius: 5px;
 	background-color: var(--primary-color);
 	color: #fff;
 	transition: background-color 0.3s ease;
 	box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+	font-size: medium;
 
 	&:focus {
 		border: none;

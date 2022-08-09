@@ -1,4 +1,4 @@
-import { IconType } from 'react-icons';
+import { IconType } from '@/components/Icons/libs';
 import { PagoType } from '../pagos/interfaces';
 
 export interface UserConfigInterface {

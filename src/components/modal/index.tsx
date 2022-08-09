@@ -1,7 +1,7 @@
 import * as React from 'react';
-import { FaTimes } from 'react-icons/fa';
 import { motion } from 'framer-motion';
 import { IModalProps } from './interfaces';
+import { FaX } from '../Icons/fa/FaX';
 
 const Modal: React.FC<IModalProps> = props => {
 	const { showModal, setShowModal } = props;
@@ -49,18 +49,18 @@ const Modal: React.FC<IModalProps> = props => {
 					className={`px-4 w-full py-6 mx-auto h-full overflow-auto ${maxWidth} `}
 				>
 					{/*content*/}
-					<div className="border-0 rounded-lg shadow-lg lg:mt-44 flex flex-col w-full bg-white dark:bg-slate-800 dark:text-white outline-none focus:outline-none">
+					<div className="border-0 rounded-lg shadow-lg lg:mt-44 flex flex-col w-full bg-white outline-none focus:outline-none">
 						{/*header*/}
-						<div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 dark:border-slate-700 rounded-t">
-							<h3 className=" text-lg md:text-2xl dark:font-medium font-semibold">
+						<div className="flex items-start justify-between p-5 border-b border-solid border-slate-200 rounded-t">
+							<h3 className=" text-lg md:text-2xl  font-semibold">
 								{props.titulo}
 							</h3>
 							<button
 								className="p-1 ml-auto bg-transparent border-0 text-black opacity-85 float-right text-lg leading-none font-semibold outline-none focus:outline-none"
 								onClick={() => setShowModal(false)}
 							>
-								<span className="dark:text-white">
-									<FaTimes />
+								<span>
+									<FaX />
 								</span>
 							</button>
 						</div>

@@ -1,6 +1,6 @@
+import { IconType } from '@/components/Icons/libs';
 import * as React from 'react';
 import { useEffect } from 'react';
-import { IconType } from 'react-icons';
 import {
 	classDropdown,
 	DropdownBadge,

@@ -1,14 +1,20 @@
 import { toast } from 'react-toastify';
-import { FaEye, FaPen, FaFilePdf, FaPaypal, FaUser } from 'react-icons/fa';
-import { IDPAGOPAYPAL, RADMIN } from '../../../utils';
 import { useAuthContext } from '../../../context/AuthState';
 import { pagosConfig } from '../../../config/pagos';
 import clienteAxios from '../../../config/axios';
 import { usersConfig } from '../../../config/users';
-import { Button, Dropdown, NextLink } from '../../@common';
 import React from 'react';
-import { BsThreeDotsVertical } from 'react-icons/bs';
 import { PagoType } from '../../../config/pagos/interfaces';
+import { Dropdown } from '@/components/@common/Dropdown';
+import { NextLink } from '@/components/@common/Link';
+import { Button } from '@/components/@common/Buttons';
+import { IDPAGOPAYPAL, RADMIN } from '@/utils/consts';
+import { FaUser } from '@/components/Icons/fa/users/FaUser';
+import { FaPaypal } from '@/components/Icons/fa/FaPaypal';
+import { FaFilePdf } from '@/components/Icons/fa/files/FaFilePdf';
+import { FaEye } from '@/components/Icons/fa/FaEye';
+import { FaPen } from '@/components/Icons/fa/FaPen';
+import { BsThreeDotsVertical } from '@/components/Icons/bs/BsThreeDotsVertical';
 
 interface IBotonesPagosProps {
 	pago: PagoType;

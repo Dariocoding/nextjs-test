@@ -2,15 +2,13 @@ import * as React from 'react';
 import { tipoPagoConfig } from '../../config/tipospago';
 import NextHead from '../../components/@common/next-head';
 import useValidarPermisosPagina from '../../hooks/useValidarPermisosPagina';
-import { RADMIN } from '../../utils';
 import dynamic from 'next/dynamic';
 import { NextPage } from 'next';
-import TitleAdminPlaceholder from '@/components/@placeholders/TitleAdminPlaceholder';
 import TableLoader from '@/components/@placeholders/DataTablePlaceholder';
+import { RADMIN } from '@/utils/consts';
 
 const PageContentAdmin = dynamic(() => import('../../components/layout-dashboard/PageContent'), {
 	ssr: false,
-	loading: () => <TitleAdminPlaceholder />,
 });
 
 const TableTiposPago = dynamic(() => import('../../components/app-datatables/TableTipoPagos'), {

@@ -2,14 +2,12 @@ import { ReactNode, useEffect, useState } from 'react';
 import { toast } from 'react-toastify';
 import { useDropzone as Dropzone } from 'react-dropzone';
 import styled from 'styled-components';
-import { FaUpload } from 'react-icons/fa';
-import { toBase64 } from '../utils/';
+import { toBase64 } from '../utils/toBase64';
 import { File } from '../extensions';
-import { DarkMode, useTheme } from '../context/DarkModeState';
-import { Button } from '../components/@common';
+import { Button } from '@/components/@common/Buttons';
+import { FaUpload } from '@/components/Icons/fa/FaUpload';
 
 const useDropzone = (props: IUseDropzoneProps): UseDropzoneReturnValues => {
-	const { theme } = useTheme();
 	const {
 		accept = { 'image/*': [] },
 		action = 'multiple',
@@ -60,6 +58,7 @@ const useDropzone = (props: IUseDropzoneProps): UseDropzoneReturnValues => {
 							{iconPreview}
 						</div>
 					) : (
+						/* eslint-disable-next-line */
 						<img src={file.preview} alt="preview" />
 					)}
 				</ThumbInner>
@@ -105,7 +104,6 @@ const useDropzone = (props: IUseDropzoneProps): UseDropzoneReturnValues => {
 	const DropzoneContenedor = (
 		<>
 			<Container
-				theme={theme}
 				isDragActive={isDragActive}
 				{...getRootProps({ className: 'dropzone' })}
 			>
@@ -128,7 +126,7 @@ const useDropzone = (props: IUseDropzoneProps): UseDropzoneReturnValues => {
 	return { DropzoneContenedor, files, setFiles };
 };
 
-const Container = styled.div<{ theme: DarkMode } & BorderDropzoneProps>`
+const Container = styled.div<BorderDropzoneProps>`
 	flex: 1;
 	display: flex;
 	flex-direction: column;
@@ -136,14 +134,14 @@ const Container = styled.div<{ theme: DarkMode } & BorderDropzoneProps>`
 	padding: 50px;
 	border-width: 2px;
 	border-radius: 3px;
-	background-color: ${props => (props.theme === 'dark' ? '#374151' : '#f1f5f9')};
+	background-color: #f1f5f9;
 	border-color: ${(props): string => getColor(props)};
 	border-style: ${props => (props.isDragActive ? 'solid' : 'dashed')};
 	outline: none;
 	cursor: pointer;
 	transition: border 0.24s ease-in-out;
 	p {
-		color: ${props => (props.theme === 'dark' ? '#fff' : '#111')};
+		color: #111;
 		font-weight: 600;
 		user-select: none;
 		text-align: center;
@@ -223,8 +221,8 @@ interface IUseDropzoneProps {
 	labelText?: string;
 	iconPreview?: ReactNode;
 	limit?: number;
-	onUpload?(files: Object | Array<Object>): void;
-	onDeleteFile?(file: Object): void;
+	onUpload?(files: any | Array<any>): void;
+	onDeleteFile?(file: any): void;
 	canDelete?: boolean;
 	id?: string;
 	key?: string;

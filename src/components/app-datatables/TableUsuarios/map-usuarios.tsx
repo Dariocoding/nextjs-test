@@ -1,6 +1,6 @@
 import ButtonTableUsuarios from './Buttons';
 import { UserConfigInterface, UserTypeTable } from '../../../config/users/interfaces';
-import { FotoPerfilUser } from '../../../utils';
+import { FotoPerfilUser } from '@/utils/foto-perfil';
 
 interface MapeoUsuariosInterface {
 	eliminarUsuario(iduser: number): void;

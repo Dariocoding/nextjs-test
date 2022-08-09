@@ -1,9 +1,12 @@
+import { ButtonOutline } from '@/components/@common/Buttons';
+import { Dropdown } from '@/components/@common/Dropdown';
+import { NextLink } from '@/components/@common/Link';
+import { FaSignOut } from '@/components/Icons/fa/FaSignOut';
+import { FaUserPen } from '@/components/Icons/fa/users/FaUserPen';
+import { FotoPerfilUser } from '@/utils/foto-perfil';
 import * as React from 'react';
-import { FaSignOutAlt, FaUserEdit } from 'react-icons/fa';
 import { useAuthContext } from '../../../context/AuthState';
 import { useLoader } from '../../../context/LoaderPageState';
-import { FotoPerfilUser } from '../../../utils';
-import { ButtonOutline, Dropdown, NextLink } from '../../@common';
 
 const UserMenu: React.FunctionComponent = () => {
 	const { setLoader } = useLoader();
@@ -35,12 +38,12 @@ const UserMenu: React.FunctionComponent = () => {
 				<React.Fragment>
 					<NextLink href="/profile">
 						<ButtonOutline variant="primary" className="mb-3">
-							<FaUserEdit />
+							<FaUserPen />
 							<span className="text-sm">Profile</span>
 						</ButtonOutline>
 					</NextLink>
 					<ButtonOutline variant="primary" onClick={handleLogout}>
-						<FaSignOutAlt />
+						<FaSignOut />
 						<span className="text-sm">Logout</span>
 					</ButtonOutline>
 				</React.Fragment>

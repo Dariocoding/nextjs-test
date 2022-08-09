@@ -1,6 +1,5 @@
 import classNames from 'classnames';
 import * as React from 'react';
-
 import Sidebar from './Sidebar';
 import TopNav from './TopNav';
 
@@ -8,12 +7,11 @@ interface ILayoutDashboardProps {
 	children: React.ReactNode;
 }
 
-const Layout = classNames('text-slate-900', 'dark:text-slate-100', 'min-h-screen', 'h-full');
+const Layout = classNames('text-slate-900', 'min-h-screen', 'h-full');
 
 const LayoutContent = classNames(
 	'md:pl-[var(--sidebar-width)]',
 	'bg-slate-300',
-	'dark:bg-gray-900',
 	'h-full',
 	'min-h-screen'
 );

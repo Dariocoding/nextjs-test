@@ -1,13 +1,15 @@
+import { FaUpload } from '@/components/Icons/fa/FaUpload';
+import { PF } from '@/utils/consts';
+import { FotoPerfilUser } from '@/utils/foto-perfil';
+import { handleError } from '@/utils/handleError';
 import Compressor from 'compressorjs';
 import * as React from 'react';
-import { FaUpload } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 import clienteAxios from '../../../config/axios';
 import { usersConfig } from '../../../config/users';
 import { useAuthContext } from '../../../context/AuthState';
 import { useLoader } from '../../../context/LoaderPageState';
 import { File } from '../../../extensions';
-import { FotoPerfilUser, handleError, PF } from '../../../utils';
 
 const PhotoProfile: React.FC = () => {
 	const { setLoader } = useLoader();
@@ -96,7 +98,7 @@ const PhotoProfile: React.FC = () => {
 				ref={InputFile}
 				onChange={onChangeInputFile}
 			/>
-			<div className="opacity-0 rounded-lg group-hover:opacity-100 duration-300 absolute inset-x-0 bottom-0 flex justify-center text-sm bg-gray-200 dark:bg-gray-800 text-black dark:text-white items-center select-none">
+			<div className="opacity-0 rounded-lg group-hover:opacity-100 duration-300 absolute inset-x-0 bottom-0 flex justify-center text-sm bg-gray-200 text-black items-center select-none">
 				Upload <FaUpload className="ml-1" />
 			</div>
 		</div>

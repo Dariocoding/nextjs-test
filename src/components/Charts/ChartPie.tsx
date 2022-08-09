@@ -2,7 +2,7 @@ import { faker } from '@faker-js/faker';
 import * as React from 'react';
 import { Chart as ChartJS, ArcElement, Tooltip, Legend } from 'chart.js';
 import { Doughnut } from 'react-chartjs-2';
-import { getRandomColor } from '../../utils';
+import { getRandomColor } from '@/utils/randomColors';
 ChartJS.register(ArcElement, Tooltip, Legend);
 
 /* const options = {

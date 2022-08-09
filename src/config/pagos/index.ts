@@ -1,7 +1,7 @@
-import { RiMoneyDollarCircleFill } from 'react-icons/ri';
+import { FaDollarSign } from '@/components/Icons/fa/currency/FaDollarSign';
 
 export const pagosConfig = {
-	Icon: RiMoneyDollarCircleFill,
+	Icon: FaDollarSign,
 	upperCase: 'Pago',
 	upperCasePlural: 'Pagos',
 	lowerCase: 'pago',

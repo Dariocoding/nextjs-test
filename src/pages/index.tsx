@@ -1,12 +1,13 @@
 import type { NextPage } from 'next';
 import React from 'react';
-import Footer from '../components/Footer';
 import Header from '../components/Header';
 import Features from '../components/lading-home/Features';
-import FeaturesBlocks from '../components/lading-home/FeaturesBlocks';
 import HeroHome from '../components/lading-home/HeroHome';
-import Newsletter from '../components/lading-home/Newsletter';
+import dynamic from 'next/dynamic';
+import FeaturesBlocks from '@/components/lading-home/FeaturesBlocks';
+import Newsletter from '@/components/lading-home/Newsletter';
 import Testimonials from '../components/lading-home/Testimonials';
+const Footer = dynamic(() => import('../components/Footer'));
 
 const Home: NextPage = () => {
 	return (
@@ -15,7 +16,7 @@ const Home: NextPage = () => {
 
 			<Header />
 
-			<div className="flex-grow dark:bg-slate-900 dark:text-white">
+			<div className="flex-grow">
 				<HeroHome />
 				<Features />
 				<FeaturesBlocks />

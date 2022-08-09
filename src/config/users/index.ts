@@ -1,10 +1,10 @@
-import { HiUserGroup } from 'react-icons/hi';
-import { RiShieldUserFill } from 'react-icons/ri';
-import { RADMIN, RUSUARIO } from '../../utils';
+import { FaUserGroup } from '@/components/Icons/fa/users/FaUserGroup';
+import { FaUserShield } from '@/components/Icons/fa/users/FaUserShield';
+import { RADMIN, RUSUARIO } from '@/utils/consts';
 import { UsersConfigInterface } from './interfaces';
 export const usersConfig: UsersConfigInterface = {
 	administrador: {
-		Icon: RiShieldUserFill,
+		Icon: FaUserShield,
 		upperCase: 'Administrador',
 		upperCasePlural: 'Administradores',
 		lowerCase: 'administrador',
@@ -19,12 +19,11 @@ export const usersConfig: UsersConfigInterface = {
 		},
 	},
 	usuarios: {
-		Icon: HiUserGroup,
+		Icon: FaUserGroup,
 		upperCase: 'Usuario',
 		upperCasePlural: 'Usuarios',
 		lowerCase: 'usuario',
 		lowerCasePlural: 'usuarios',
-		urlViewPage: '/usuarios/estudiantes/ver-estudiante/',
 		rolid: RUSUARIO,
 		endpoints: {
 			getAll: 'administradores/getUsuarios',

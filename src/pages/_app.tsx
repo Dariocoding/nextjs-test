@@ -1,41 +1,20 @@
 import '../styles/globals.css';
 import 'react-toastify/dist/ReactToastify.css';
-import * as React from 'react';
 import type { AppProps } from 'next/app';
-import DarkModeState from '../context/DarkModeState';
-import { useRouter } from 'next/router';
 import AuthState from '../context/AuthState';
 import { ToastContainer } from 'react-toastify';
-import RainbowStateColor from '../context/DarkModeState/RainbowStateColors';
-import Loader from '../context/LoaderPageState/Loader';
-import LoaderPageState from '../context/LoaderPageState';
-import ModalState from '../context/ModalState';
-import ConfigState from '../context/ConfigState';
+import { useRouter } from 'next/router';
 import Head from 'next/head';
-import dynamic from 'next/dynamic';
-
-const LayoutDashboard = dynamic(() => import('../components/layout-dashboard'), {
-	ssr: false,
-	loading: () => <Loader loading texto="" />,
-});
+import { useEffect, useState } from 'react';
+import ConfigState from '@/context/ConfigState';
+import LoaderPageState from '@/context/LoaderPageState';
+import Loader from '@/context/LoaderPageState/Loader';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	const router = useRouter();
-	const [loading, setLoading] = React.useState(false);
+	const [loading, setLoading] = useState(false);
 
-	const listAdmin = [
-		'/dashboard',
-		'/profile',
-		'/usuarios',
-		'/pagos',
-		'/settings',
-		'/settings/tipos-pago',
-		'/pagos/orden/[id]',
-		'/pagos/transaccion/[id]',
-	];
-	const isDashboard = listAdmin.includes(router.pathname);
-
-	React.useEffect(() => {
+	useEffect(() => {
 		const handleStart = (url: string) => {
 			if (url !== router.asPath) setLoading(true);
 		};
@@ -54,17 +33,8 @@ function MyApp({ Component, pageProps }: AppProps) {
 		};
 	});
 
-	const Page = () =>
-		isDashboard ? (
-			<LayoutDashboard>
-				<Component {...pageProps} />
-			</LayoutDashboard>
-		) : (
-			<Component {...pageProps} />
-		);
-
 	return (
-		<React.Fragment>
+		<>
 			<Head>
 				<title>Mi website</title>
 				<meta name="description" content="Descripcion de mi sitio web" />
@@ -73,19 +43,13 @@ function MyApp({ Component, pageProps }: AppProps) {
 			<Loader texto="Loading..." loading={loading} />{' '}
 			<ToastContainer position="bottom-right" theme="colored" />
 			<ConfigState>
-				<LoaderPageState>
-					<AuthState>
-						<DarkModeState>
-							<RainbowStateColor>
-								<ModalState>
-									<Page />
-								</ModalState>
-							</RainbowStateColor>
-						</DarkModeState>
-					</AuthState>
-				</LoaderPageState>
+				<AuthState>
+					<LoaderPageState>
+						<Component {...pageProps} />
+					</LoaderPageState>
+				</AuthState>
 			</ConfigState>
-		</React.Fragment>
+		</>
 	);
 }
 

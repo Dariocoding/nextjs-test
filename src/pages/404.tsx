@@ -1,7 +1,8 @@
+import { Button } from '@/components/@common/Buttons';
+import { NextLink } from '@/components/@common/Link';
+import { FaArrowLeft } from '@/components/Icons/fa/arrows/FaArrowLeft';
 import { NextPage } from 'next';
 import * as React from 'react';
-import { FaArrowLeft } from 'react-icons/fa';
-import { Button, NextLink } from '../components/@common';
 import Footer from '../components/Footer';
 import Header from '../components/Header';
 
@@ -12,13 +13,13 @@ const NotFoundPage: NextPage = () => {
 
 			<Header />
 
-			<div className="flex-grow dark:bg-slate-900 dark:text-white h-screen">
-				<section className="flex items-center h-full sm:p-16 dark:bg-gray-900 dark:text-gray-100">
+			<div className="flex-grow h-screen">
+				<section className="flex items-center h-full sm:p-16">
 					<div className="container flex flex-col items-center justify-center px-5 mx-auto my-8 space-y-8 text-center sm:max-w-md">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							viewBox="0 0 512 512"
-							className="w-40 h-40 dark:text-gray-600 animate-pulse"
+							className="w-40 h-40 animate-pulse"
 						>
 							<path
 								fill="currentColor"
@@ -40,7 +41,7 @@ const NotFoundPage: NextPage = () => {
 								points="383.958 182.63 360.042 161.37 338.671 185.412 314.63 164.042 293.37 187.958 317.412 209.329 296.042 233.37 319.958 254.63 341.329 230.588 365.37 251.958 386.63 228.042 362.588 206.671 383.958 182.63"
 							></polygon>
 						</svg>
-						<p className="text-4xl font-bold dark:font-medium">
+						<p className="text-4xl font-bold">
 							404 Page Not Found
 						</p>
 						<NextLink href="/">

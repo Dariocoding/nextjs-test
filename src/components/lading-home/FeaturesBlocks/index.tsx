@@ -1,10 +1,11 @@
 import React from 'react';
-import { WiStars } from 'react-icons/wi';
-import { MdDesignServices } from 'react-icons/md';
-import { BsFillPhoneFill } from 'react-icons/bs';
-import { RiFindReplaceFill } from 'react-icons/ri';
-import { FaPeopleArrows, FaUserPlus } from 'react-icons/fa';
 import FeatureBlock from './Card';
+import { FaSearch } from '@/components/Icons/fa/FaSearch';
+import { FaPeopleArrow } from '@/components/Icons/fa/users/FaPeopleArrow';
+import { FaUserPlus } from '@/components/Icons/fa/users/FaUserPlus';
+import { FaMobile } from '@/components/Icons/fa/FaMobile';
+import { FaStars } from '@/components/Icons/fa/FaStars';
+import { FaDesignService } from '@/components/Icons/fa/FaDesignService';
 
 function FeaturesBlocks() {
 	return (
@@ -21,7 +22,7 @@ function FeaturesBlocks() {
 					{/* Section header */}
 					<div className="max-w-3xl mx-auto text-center pb-12 md:pb-20">
 						<h2 className="h2 mb-4">How Simple works</h2>
-						<p className="text-xl text-gray-600 dark:text-gray-300">
+						<p className="text-xl text-gray-600">
 							Duis aute irure dolor in reprehenderit in
 							voluptate velit esse cillum dolore eu fugiat
 							nulla pariatur excepteur sint occaecat
@@ -32,7 +33,7 @@ function FeaturesBlocks() {
 					{/* Items */}
 					<div className="max-w-sm mx-auto grid gap-6 md:grid-cols-2 lg:grid-cols-3 items-start md:max-w-2xl lg:max-w-none">
 						<FeatureBlock
-							Icon={FaPeopleArrows}
+							Icon={FaPeopleArrow}
 							title={'Initial Contact'}
 							description={
 								'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -40,7 +41,7 @@ function FeaturesBlocks() {
 						/>
 
 						<FeatureBlock
-							Icon={RiFindReplaceFill}
+							Icon={FaSearch}
 							title={'Discovery Session'}
 							description={
 								'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -56,7 +57,7 @@ function FeaturesBlocks() {
 						/>
 
 						<FeatureBlock
-							Icon={BsFillPhoneFill}
+							Icon={FaMobile}
 							title={'Fast Prototyping'}
 							description={
 								'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -64,7 +65,7 @@ function FeaturesBlocks() {
 						/>
 
 						<FeatureBlock
-							Icon={MdDesignServices}
+							Icon={FaDesignService}
 							title={'Design Phase'}
 							description={
 								'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'
@@ -72,7 +73,7 @@ function FeaturesBlocks() {
 						/>
 
 						<FeatureBlock
-							Icon={WiStars}
+							Icon={FaStars}
 							title={'Develop & Launch'}
 							description={
 								'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'

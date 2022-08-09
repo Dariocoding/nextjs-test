@@ -1,10 +1,11 @@
 import { useAuthContext } from '../../context/AuthState';
-import { FaPrint } from 'react-icons/fa';
-import { Button, Table, TdTable, TrTable } from '../@common';
-import { RADMIN, RUSUARIO } from '../../utils';
 import React from 'react';
-import { RenderIf } from 'react-rainbow-components';
+import RenderIf from 'react-rainbow-components/components/RenderIf';
 import Image from 'next/image';
+import { Table, TrTable, TdTable } from '../@common/Table';
+import { Button } from '../@common/Buttons';
+import { RADMIN, RUSUARIO } from '@/utils/consts';
+import { FaPrint } from '../Icons/fa/FaPrint';
 interface IInvoiceTransaccionProps {
 	pago: any;
 }

@@ -1,4 +1,4 @@
-import { DatePicker as DatePickerRainbow } from 'react-rainbow-components';
+import DatePickerRainbow from 'react-rainbow-components/components/DatePicker';
 import { FormikValues, useFormikContext, getIn } from 'formik';
 interface IDatePickerFormikProps {
 	label: string;
