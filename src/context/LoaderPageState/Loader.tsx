@@ -11,7 +11,7 @@ const Loader: React.FunctionComponent<ILoaderProps> = props => {
 	return (
 		<div
 			className="fixed w-full h-screen flex items-center justify-center bg-slate-900"
-			style={{ opacity: 0.9, zIndex: 999999999999 }}
+			style={{ opacity: 0.4, zIndex: 999999999999 }}
 		>
 			<ImSpinner2 size={60} color={'#fff'} className={'animate-spin-slow'} />
 		</div>

@@ -33,8 +33,6 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = props => {
 		'left-0',
 		{ ['-left-[var(--sidebar-width)]']: windowSize.width < 768 && !isOpenedSidebar },
 		'top-0',
-		'bg-slate-800',
-		'bg-slate-900',
 		'shadow-lg',
 		'z-[100]',
 		'transition'
@@ -59,7 +57,10 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = props => {
 		<div
 			className={classNameSidebar}
 			ref={ref}
-			style={{ transition: 'left 0.2s ease, width 0.3s ease' }}
+			style={{
+				transition: 'left 0.2s ease, width 0.3s ease',
+				background: 'var(--app-sidebar-color-bg)',
+			}}
 		>
 			<div className={classNameLogo}>
 				<NextLink href="/">
@@ -83,7 +84,7 @@ const Sidebar: React.FunctionComponent<ISidebarProps> = props => {
 
 			<div className={classItem} onClick={handleLogout}>
 				<div className={classItemInner}>
-					<FaSignOutAlt className="mr-1" />
+					<FaSignOutAlt className="mr-2" />
 					<span className="select-none font-medium">
 						Cerrar Sesión
 					</span>

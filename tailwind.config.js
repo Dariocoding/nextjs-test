@@ -16,7 +16,13 @@ optsColors.forEach(color => {
 });
 
 module.exports = {
-	content: ['./src/pages/**/*.{js,ts,jsx,tsx}', './src/components/**/*.{js,ts,jsx,tsx}'],
+	content: [
+		'./src/pages/**/*.{js,ts,jsx,tsx}',
+		'./src/components/**/*.{js,ts,jsx,tsx}',
+		'./src/context/**/*.{js,ts,jsx,tsx}',
+		'./src/hooks/**/*.{js,ts,jsx,tsx}',
+		'./src/utils/**/*.{js,ts,jsx,tsx}',
+	],
 	safelist,
 	theme: {
 		extend: {

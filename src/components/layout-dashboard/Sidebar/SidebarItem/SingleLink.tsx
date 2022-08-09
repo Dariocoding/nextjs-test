@@ -21,13 +21,8 @@ const SingleLink: React.FunctionComponent<ISingleLinkProps> = props => {
 	return (
 		<NextLink href={Item.path}>
 			<div className={classItem}>
-				<div
-					className={
-						classItemInner +
-						(isActive ? classActiveItemInner : '')
-					}
-				>
-					<Item.Icon className="mr-1" size={props.sizeIcon} />
+				<div className={isActive ? classActiveItemInner : classItemInner}>
+					<Item.Icon className="mr-2" size={props.sizeIcon} />
 					<span className="select-none font-medium">
 						{Item.title}
 					</span>

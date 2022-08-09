@@ -35,7 +35,7 @@ input:focus {
 	--warning-hover-color: #ffaf40;
 	--warning-disabled-color: #ffaf40;
 	--gradient: linear-gradient(to right, #3b1e74, #442189, #4d239f, #5625b6, #5f27cd);
-
+	--app-sidebar-color-bg: linear-gradient(to top, #8e2de2, #4a00e0);
 	--sidebar-width: 230px;
 	--border-radius: 15px;
 	--topnav-height: 110px;

@@ -17,23 +17,26 @@ export const classItemInner = classNames(
 	'px-4',
 	'text-sm',
 	'flex',
-	'hover:bg-slate-200',
-	'hover:text-black',
+	'hover:bg-slate-600',
+	'hover:text-white',
 	'items-center',
 	'font-semibold',
 	'transition'
 );
 
 export const classActiveItemInner = classNames(
-	' ',
-	'bg-slate-200',
-	'hover:bg-slate-200',
-	'text-black',
+	'py-4',
+	'px-4',
+	'text-sm',
+	'flex',
+	'bg-slate-600',
+	'hover:bg-slate-600',
+	'text-white',
 	'cursor-default',
 	'text-sm'
 );
 
-const sizeIcon = 20;
+const sizeIcon = 18;
 
 const SidebarItem: React.FC<ISidebarItemProps> = props => {
 	const { item } = props;

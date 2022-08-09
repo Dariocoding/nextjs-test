@@ -1,6 +1,6 @@
 import { RADMIN } from '@/utils/consts';
 import { IconType } from 'react-icons';
-import { FaCogs, FaHome, FaUsers } from 'react-icons/fa';
+import { FaCogs, FaTachometerAlt, FaUsers } from 'react-icons/fa';
 import { pagosConfig } from '../../../config/pagos';
 
 export interface RouteSidebar {
@@ -13,7 +13,7 @@ export interface RouteSidebar {
 }
 
 const routesSidebar: RouteSidebar[] = [
-	{ title: 'Home', path: '/dashboard', Icon: FaHome, permisos: '*' },
+	{ title: 'Dashboard', path: '/dashboard', Icon: FaTachometerAlt, permisos: '*' },
 	{ title: 'Usuarios', path: '/usuarios', Icon: FaUsers, permisos: [RADMIN] },
 	{ title: 'Pagos', path: '/pagos', Icon: pagosConfig.Icon, permisos: '*' },
 	{ title: 'Configuración', path: '/settings', Icon: FaCogs, permisos: [RADMIN] },
