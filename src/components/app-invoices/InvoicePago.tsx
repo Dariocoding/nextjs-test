@@ -25,6 +25,7 @@ const InvoicePago: React.FunctionComponent<IInvoicePagoProps> = props => {
 					<h2 className="page-header">
 						<Image
 							width={150}
+							height={44}
 							src={'/images/logo.png'}
 							alt="Logo"
 						/>
